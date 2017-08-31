@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+    <style>
+        body{background: #000}
+        [class*='box']{
+            top:300px;
+            position:absolute;
+            width: 200px;height: 200px;
+            background: #fff;
+             border-radius:100px;
+            opacity:0;
+        }
+        .box2{top:200px; left: 400px;}
+    </style>
+</head>
+<body>
+
+<div class="box1"></div>
+<div class="box2"></div>
+<script src="https://code.jquery.com/jquery-2.0.3.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.7/TweenMax.min.js"></script>
+<script>
+    var animation = new TimelineLite();
+    var box2=$('.box2');
+    animation.to(box2, 0, {scale:5,opacity:1, left:400,ease:  Back.easeIn})
+        .to(box2,.1, {scale:1,left:300, rotation: 90,ease: Power0.easeNone})
+        .to(box2,.3, {scale:.5, rotation: 180,left:0,ease: Back.easeOut });
+
+    var animation2= new TimelineLite();
+    var box1=$('.box1');
+    animation2.to(box1, 0, {delay:.2,opacity:1,scale:5, left:400,ease:  Back.easeIn})
+        .to(box1,.1, {scale:1,left:500, rotation: 90,ease: Power0.easeNone})
+        .to(box1,.2, {scale:.5, rotation: 180,left:800,ease: Back.easeOut});
+
+</script>
+</body>
+</html>
