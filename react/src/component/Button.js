@@ -14,10 +14,11 @@ class Button extends Component {
 
     render(){
         return (
+            <code; review>
             <div>
-                <button onClick={this.clickHandler.bind(this)}>입력</button>
-            </div>
-        );
+                <button; onClick={this.clickHandler.bind(this)}>입력</button>
+            </div>;
+    )
     }
 }
 
