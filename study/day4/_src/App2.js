@@ -60,14 +60,14 @@ class App2{
 
     followers(_data2){
         let _list='';
-        if(_data2 != null){
+
             for(let value of _data2){
                 _list += '<li><a href="'+value.url+'"><img src="'+value.avatar_url+'"  width="50px" height="50px" alt="">'+value.login+'</a></li>'
             }
             /*for( let i =0; i < _data2.length; i++){
                 _list += '<li><a href="'+_data2[i].url+'"><img src="'+_data2[i].avatar_url+'"  width="50px" height="50px" alt="">'+_data2[i].login+'</a></li>'
             }*/
-        }
+
         return _list;
     }
 
