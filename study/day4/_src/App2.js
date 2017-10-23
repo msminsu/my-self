@@ -35,15 +35,16 @@ class App2{
 
     tmpl(_data, _data2){
 
-        var _list = '';
+        // let _list = '';
 
-        if(_data2 != null){
-            for( var i =0; i < _data2.length; i++){
-                _list += '<li><a href="'+_data2[i].url+'"><img src="'+_data2[i].avatar_url+'"  width="50px" height="50px" alt="">'+_data2[i].login+'</a></li>'
+/*        if(_data2 != null){
+            for(let value of _data2){
+                _list += '<li><a href="'+value.url+'"><img src="'+value.avatar_url+'"  width="50px" height="50px" alt="">'+value.login+'</a></li>'
             }
-        }else{
-            _list='<li>아직 followers 가 없습니다 </li>';
-        }
+            /!*for( let i =0; i < _data2.length; i++){
+                _list += '<li><a href="'+_data2[i].url+'"><img src="'+_data2[i].avatar_url+'"  width="50px" height="50px" alt="">'+_data2[i].login+'</a></li>'
+            }*!/
+        }*/
 
         return `
         <div class="sample">
@@ -53,10 +54,21 @@ class App2{
             <p>bio:${_data.bio}</p>
             <p>company:${_data.company}</p>
             <p>github: <a href="${_data.html_url}">${_data.html_url}</a></p>
-            <ul>
-                ${_list}            
-            </ul>
+            ${_data2 ? `<ul>${this.followers(_data2)}</ul>` : '<p>아직 followers 가 없습니다 </p>'}
         </div>`;
+    }
+
+    followers(_data2){
+        let _list='';
+        if(_data2 != null){
+            for(let value of _data2){
+                _list += '<li><a href="'+value.url+'"><img src="'+value.avatar_url+'"  width="50px" height="50px" alt="">'+value.login+'</a></li>'
+            }
+            /*for( let i =0; i < _data2.length; i++){
+                _list += '<li><a href="'+_data2[i].url+'"><img src="'+_data2[i].avatar_url+'"  width="50px" height="50px" alt="">'+_data2[i].login+'</a></li>'
+            }*/
+        }
+        return _list;
     }
 
 }
