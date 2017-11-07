@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+    <style>
+        body{background: #000}
+        [class*='box']{
+            top:300px;
+            position:absolute;
+            width: 200px;height: 200px;
+            background: #fff;
+            border-radius:100px;
+            opacity:0;
+        }
+        #man1{ position: absolute; left:700px; top:400px; width: 50px; height: 100px; background: #fff;}
+        #man2{ position: absolute; left:100px; top:400px; width: 100px; height: 100px; background: #fff;}
+        #man3{ position: absolute; left:300px; top:400px; width: 200px; height: 100px; background: #fff;}
+        #car{ position: absolute; left:-600px; top:300px; width: 300px; height: 200px; background: #fff;}
+        #lift{ position: absolute; left:150px; top:500px; width: 400px; height: 20px; background: #fff;}
+
+    </style>
+</head>
+<body>
+
+<div id="man1">men1
+</div>
+
+<div id="man2">men2</div>
+<div id="man3">men3</div>
+<div id="car"></div>
+<div id="lift"></div>
+<script src="https://code.jquery.com/jquery-2.0.3.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.7/TweenMax.min.js"></script>
+<script>
+var man1 = document.getElementById("man1"),
+    man2 = document.getElementById("man2"),
+    man3 = document.getElementById("man3"),
+    car = document.getElementById("car"),
+    lift = document.getElementById("lift"),
+    tl = new TimelineMax({repeat:0, repeatDelay:1});
+
+
+tl.to(car,1,{left:177, ease:Back.easeOut})
+    .add("up","+=1")
+    .to(car,1,{top:70},"up")
+    .to(lift,1,{top:270},"up")
+    .from([man1,man2],1,{left:-100},"up+=0.8")
+    .from(man3,1,{left:1900},"up")
+    .to(man3,0.2,{scaleX:-1},"+=1")
+    .to([man1,man2,man3],1,{left:900})
+    .to(lift,1,{top:500},'down')
+    .to(car,1,{top:300},'down')
+    .to(car,1,{left:900,ease:Power1.easeIn},"out");
+//    tl.seek("out");
+</script>
+</body>
+</html>

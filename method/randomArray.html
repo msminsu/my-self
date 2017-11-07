@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>배열 섞기</title>
+
+    <style>
+        ul{list-style:none;}
+        li{ position: absolute;width: 250px; height:40px; border:1px solid #000; text-align: center;opacity:0; margin-bottom:20px; line-height: 40px;}
+        .box{width: 200px;height: 30px; background:khaki;opacity:0}
+    </style>
+</head>
+<body>
+<div>
+    <ul>
+        <li>샘플 텍스트 - 01</li>
+        <li>샘플 텍스트 - 02</li>
+        <li>샘플 텍스트 - 03</li>
+        <li>샘플 텍스트 - 04</li>
+        <li>샘플 텍스트 - 05</li>
+        <li>샘플 텍스트 - 06</li>
+        <li>샘플 텍스트 - 07</li>
+        <li>샘플 텍스트 - 08</li>
+        <li>샘플 텍스트 - 09</li>
+        <li>샘플 텍스트 - 10</li>
+    </ul>
+    <div class="box"></div><!--
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>-->
+
+</div>
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.7/TweenMax.min.js"></script>
+<script>
+
+    let box = $('ul li');
+    let arr = [0,1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+
+    function shuffle(_arr) {
+        var result = [];
+
+        box.each(function(){
+            $(this).css({left:parseInt(Math.random()*1000),top:parseInt(Math.random() * 500)});
+        });
+
+        for (i = 0; _arr.length; i++) {
+            var num = parseInt(Math.random() * (_arr.length));
+            result.push(arr.splice(num, 1)[0]);
+            //TweenMax.To(box.eq(arr.splice(num, 1)[0]), 0.5, {delay:i*0.2,scale: 2, opacity: 1, ease: Back.easeOut});
+        }
+        return result;
+
+    }
+    //console.log(shuffle(arr));
+
+
+    TweenMax.to("ul li", 0.2, {scale:0, opacity: 0, ease: Back.easeOut});
+
+    var ani =() =>{
+        var rendom = shuffle(arr);
+        for(var j=0; j<rendom.length; j++) {
+            var target = box.eq(rendom[j]);
+            TweenMax.to(target, 0.3, {delay:j*0.1,scale:1, opacity: 1, ease: Back.easeOut});
+        }
+    };
+        ani();
+
+
+//    TweenMax.to($(".box").eq(0), 0.5, {delay:0.2,scale: 2, opacity: 1, ease: Back.easeOut});
+</script>
+</body>
+</html>
