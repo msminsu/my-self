@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* Reset */
+        html{}
+        body{margin:0px;padding:0px;font-size:12px;line-height:1.2;font-family:"나눔 고딕","맑은 고딕","Dotum","돋움","굴림",Sans-serif;letter-spacing:0;}
+        div,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,form,fieldset,p{margin:0;padding:0;font-size:12px;line-height:18px;color:#666;list-style:none}
+        fieldset,dl,dd,dt,img{border:0;vertical-align:top;}
+        address,em{font-style:normal}
+        hr,legend,caption{display:none}
+        button,label{cursor:pointer}
+        table{border-collapse:collapse}
+        a{text-decoration:none}
+        .blind{display:block;text-indent: -999em}
+
+        h3{ font-size: 16px; font-weight: 500;color:#222}
+
+        .book{ width: 315px;}
+        .book .bookWrap{ position: relative;}
+        .book .btnbox{overflow:hidden; position: absolute; top: 0;right:0;}
+        .book .btnbox li{float:left;}
+        .book .btnbox li a{display: block; width: 34px; height: 45px;outline:1px solid red}
+        .bookWrap{border:1px solid #ddd}
+        .bookContent{ border-top:1px solid #ddd;}
+    </style>
+</head>
+<body>
+
+<div class="book">
+    <div class="bookWrap">
+        <h3>추천도서</h3>
+        <ul class="btnbox">
+            <li><a class="prev" href="#prev"><span class="blind">이전</span></a></li>
+            <li><a class="next" href="#next"><span class="blind">다음</span></a></li>
+            <li><a class="more" href="#"><span class="blind">더보기</span></a></li>
+        </ul>
+        <div class="bookContent">
+            <ul>
+                <li>
+                    <a href="#">
+                        <div class="bookImg">
+                            <img src="http://de.whalesoft.co.kr/siteTemplete/ice_ipl/img/incheon_book_img.png">
+                            <img src="http://de.whalesoft.co.kr/siteTemplete/ice_ipl/img/incheon_book_tag.png"
+                                 class="tag">
+                        </div>
+                        <div class="bookEx">
+                            <dl>
+                                <dt>로봇 시대3, 인간의 일</dt>
+                                <dd><span>구본권</span><span>어크로스</span></dd>
+                                <dd>12345678</dd>
+                                <dd>IT 전문 저널리스트로 활동하며 기술과 사람이 건강한 관계를 구축할 방도를 모색해온 디지털 인문학자가 내놓은..</dd>
+                            </dl>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

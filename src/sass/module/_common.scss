@@ -1,0 +1,35 @@
+/**
+ * button position
+ */
+[class*="btn-link-"],
+[class*="btn-layer-"]{
+	position:absolute;
+	display:block;
+	overflow:hidden;
+	text-indent:$indentValue;
+	left:50%;
+	z-index:10;
+}
+
+@each $selector, $value in $button{
+	#{$selector}{
+		@each $key, $size in $value{
+			#{$key}:$size + px;
+		}
+	}
+}
+
+/**
+ * page css
+ */
+//nav{
+//  @include set-area($bg:'common/bg-nav.jpg', $height:'100');
+//  a{ display: block; width: 316px; height: 100px; position: absolute; left:50%; top:0;
+//	&.btn-link-reception{ margin-left: -400px;@include bg($bg: 'common/btn-nav1.png');}
+//	&.btn-link-result{ margin-left: -84px;@include bg($bg: 'common/btn-nav2.png');}
+//	&:hover{background-position: 0 100%}
+//  }
+//  li.active{a{background-position: 0 100%}}
+//
+//}
+

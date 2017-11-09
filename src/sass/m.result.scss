@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+/* import */
+@import "util/m.variable";
+@import "util/mixin";
+@import "util/reset";
+
+
+img{ border:0; width:100%; max-width:100%; vertical-align:top; }
+#container{ max-width:640px; margin: 0 auto;}
+
+
+/**
+ * button position
+ */
+[class*="btn-link-"],
+[class*="btn-layer-"]{
+    position:absolute;
+    display:block;
+    overflow:hidden;
+    text-indent:$indentValue;
+    left:50%;
+    z-index:10;
+}
+
+@each $selector, $value in $button{
+    #{$selector}{
+        @each $key, $size in $value{
+            #{$key}:unquote($size + "%");
+        }
+    }
+}
+
+
+/**
+ * page css
+ */
+header{
+    @extend .hide;
+}
+
+footer{
+    @extend .hide;
+    .share {
+        .facebook {
+            @include position-abs($width: 13.5%, $height: 31%, $left: 50%);
+            margin-left: -15.2%;
+            top: 17.9%;
+        }
+        .twitter {
+            @include position-abs($width: 13.5%, $height: 31%, $left: 50%);
+            margin-left: 1.2%;
+            top: 17.9%
+        }
+    }
+}
+
+.section{
+    &-1{
+        @extend .hide;
+        
+    }
+    &-caution{
+        @extend .hide;
+        a{
+            @include position-abs($width: 26%, $height: 11%, $left: 50%);
+            margin-left: -21%;
+            top: 35%;
+        }
+    }
+}
+
+.video{ position:absolute; width: 92%;
+    height: 35%;
+    top: 24.1%;
+    left: 50%;
+    margin-left: -45.9%;
+    iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+}
+

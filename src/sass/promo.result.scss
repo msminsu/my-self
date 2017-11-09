@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+/**
+ * import
+ */
+
+@import "../../../../../common/sass/base/normalize.4.0.0";
+@import "util/variable.result";
+@import "util/mixin";
+@import "util/reset";
+@import "module/common";
+@import "vendor/custom-mix";
+
+//a{ background: red; opacity:.5;}
+
+#header{
+    @include set-area($bg:'result/bg-header.jpg', $height:'924');
+    .sns-list{ position: absolute; left: 50%; top: 28px;margin-left: 348px;
+        li{float:left;
+            a{ display: block; width: 35px; height: 31px;}
+        }
+    }
+    .ef1{@include bg($bg:'result/ef1.gif');@include pos-a($width:178px,$height:178px,$left:50%,$top:52px);
+        margin-left: -475px;}
+    .ef2{@include bg($bg:'result/ef2.gif');@include pos-a($width:142px,$height:142px,$left:50%,$top:73px);
+        margin-left: 303px;}
+    .ef3{@include bg($bg:'result/ef2.gif');@include pos-a($width:142px,$height:142px,$left:50%,$top:434px);
+        margin-left: -527px;}
+}
+
+#footer{
+    @include set-area($bg:'result/bg-footer.jpg', $height:'239');
+    .sns-list{ position: absolute; left: 50%; top: 44px;margin-left: 96px;
+        li{float:left;
+            a{ display: block; width: 25px; height: 25px;}
+        }
+    }
+}
+
+nav{
+    @include set-area($bg:'result/bg-nav.jpg', $height:'888');
+    ul{
+        @include bg($bg:'result/nav-02.png');
+        position: absolute; left: 50%; top: 132px;margin-left: -383px;
+        width: 909px;
+        height: 385px;
+    }
+    a{ display: block; height: 85px; position: absolute; left:50%;
+        transform: skew(0deg, 160deg);
+        &.btn-link-receipt{ width: 355px;top:240px; margin-left: -450px;}
+        &.btn-link-result{ width: 430px;top:50px; margin-left: 28px;}
+    }
+    /*li.active{a{background-position: 0 100%}}*/
+    
+}
+
+.section{
+    
+    &-1{
+        @include set-area($bg:'result/bg-sec-01.jpg', $height:'1685');
+        .video{ position: absolute;
+            top:363px;
+            left:50%;
+            margin-left:-640px;
+            text-indent: 0;
+            width:1280px;
+            height:718px;
+        }
+    }
+    
+    &-caution{
+        @include set-area($bg:'result/bg-caution.jpg', $height:'340');
+    
+        .disc{
+            margin-top:129px;
+            line-height:24px;
+            position:relative;
+            left:50%;
+            width:$minWidth;
+            margin-left:-548px;
+            text-indent:0;
+            a{ font-weight:bold; }
+        }
+        ul{
+            font-size: 12px;
+        }
+        strong{ display: block; padding-top: 24px; font-size: 14px;}
+    }
+}
+
+

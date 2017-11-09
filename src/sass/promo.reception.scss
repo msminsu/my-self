@@ -1,0 +1,485 @@
+@charset "UTF-8";
+
+/**
+ * import
+ */
+
+@import "../../../../../common/sass/base/normalize.4.0.0";
+@import "util/variable.reception";
+@import "util/mixin";
+@import "util/reset";
+@import "module/layer";
+@import "module/common";
+@import "vendor/custom-mix";
+
+//a{ background: red; opacity:.5;}
+
+#header{
+    @include set-area($bg:'reception/bg-header.jpg', $height:'924');
+    .sns-list{ position: absolute; left: 50%; top: 28px;margin-left: 348px;
+        li{float:left;
+            a{ display: block; width: 35px; height: 31px;}
+        }
+    }
+    i{}
+    .ef1{@include bg($bg:'reception/ef1.gif');@include pos-a($width:178px,$height:178px,$left:50%,$top:52px);
+        margin-left: -475px;}
+    .ef2{@include bg($bg:'reception/ef2.gif');@include pos-a($width:142px,$height:142px,$left:50%,$top:73px);
+        margin-left: 303px;}
+    .ef3{@include bg($bg:'reception/ef2.gif');@include pos-a($width:142px,$height:142px,$left:50%,$top:434px);
+        margin-left: -527px;}
+}
+
+#footer{
+    @include set-area($bg:'reception/bg-footer.jpg', $height:'185');
+    .sns-list{ position: absolute; left: 50%; top: 40px;margin-left: 96px;
+        li{float:left;
+            a{ display: block; width: 25px; height: 25px;}
+        }
+    }
+}
+
+nav{
+    @include set-area($bg:'reception/bg-nav.jpg', $height:'888');
+    ul{
+        @include bg($bg:'reception/nav-01.png');
+        position: absolute; left: 50%; top: 132px;margin-left: -383px;
+        width: 909px;
+        height: 385px;
+    }
+    a{ display: block; height: 85px; position: absolute; left:50%;
+        transform: skew(0deg, 160deg);
+        &.btn-link-receipt{ width: 355px;top:240px; margin-left: -450px;}
+        &.btn-link-result{ width: 430px;top:50px; margin-left: 28px;}
+    }
+    /*li.active{a{background-position: 0 100%}}*/
+    
+}
+
+.section{
+    
+    &-1{
+        @include set-area($bg:'reception/bg-sec-01.jpg', $height:'990');
+        .gellary-area{
+            @include pos-a($top:268px,$left:50%,$width:1162px, $height:610px);
+            text-indent: 0;
+            .slick-1{
+                border:5px solid #4ebdfc;left:107px; width: 950px; height: 536px;
+			  li{outline:none;}
+                .slick-dots{
+                    bottom:-78px;
+                    li{margin:0 15px;
+                        &.slick-active{
+                            button{
+                                &:before{
+                                    opacity:1;
+                                    background: #4ebdfc;
+                                }
+                            }
+                        }
+                        button{
+                            border-radius: 10px;
+                            &:before{
+                                border-radius: 20px;
+                                opacity:1;
+                                background: #fff;
+                                content:'';
+                            }
+                        }
+                    }
+                }
+                .slick-prev, .slick-next {
+                    font-size: 0;
+                    line-height: 0;
+                    position: absolute;
+                    top: 240px;
+                    display: block;
+                    width: 46px; height: 69px;
+                    margin-top: -10px;
+                    padding: 0;
+                    cursor: pointer;
+                    color: transparent;
+                    border: none;
+                    outline: none;
+                    background: transparent;
+                }
+                .slick-prev {
+                    left:-107px;
+                    &:before {
+                        opacity:1;
+                        content: '';
+                        display: block;
+                        width: 49px; height: 72px;
+                        @include bg($bg: 'reception/btn-left.png');
+                    }
+                }
+                .slick-next {
+                    right:-107px;
+                    &:before {
+                        opacity:1;
+                        content: '';
+                        display: block;
+                        width: 49px; height: 72px;
+                        @include bg($bg: 'reception/btn-right.png');
+                    }
+                }
+            }
+        }
+    }
+    &-2{
+        @include set-area($bg:'reception/bg-sec-02.jpg', $height:'985');
+	  .hover-area{@include pos-a($width:1372px,$height:595px,$left:50%,$top:236px);
+		margin-left:-643px;}
+	  [class *='tooltip-0']{ position: absolute;display: block;width: 269px; height: 221px;
+		strong{ position: absolute;display: block;width: 269px; height: 221px;
+		  z-index:10; top:0;}
+		&:hover{ strong{background-position: 0 100%}}
+	  }
+	  [class *='intip-']{ display: block;
+		position: absolute;
+	  }
+	  .tooltip-01{ position: absolute; top: 343px; left: 70px;
+		strong{@include bg($bg:'reception/tooltip1.png');}
+	  	.intip-1{@include bg($bg:'reception/talk1-1.png'); width:186px; height:209px; top: -90px; left: -68px;z-index:3 }
+		.intip-2{@include bg($bg:'reception/talk1-2.png'); width:151px; height:229px; top: -200px; left: 15px;z-index:1 }
+		.intip-3{@include bg($bg:'reception/talk1-3.png'); width:176px; height:152px; top: -113px; left: 137px;z-index:2 }
+	  }
+	  .tooltip-02{ position: absolute; top: 266px; left: 360px;
+		strong{@include bg($bg:'reception/tooltip2.png');}
+	  	.intip-1{@include bg($bg:'reception/talk2-1.png'); width:226px; height:234px; top: -93px; left: -49px;z-index:3 }
+		.intip-2{@include bg($bg:'reception/talk2-2.png'); width:186px; height:208px; top: -174px; left: 46px;z-index:1 }
+		.intip-3{@include bg($bg:'reception/talk2-3.png'); width:156px; height:152px; top: -84px; left: 160px;z-index:2  }
+	  }
+	  .tooltip-03{ position: absolute; top: 200px; left: 655px;
+		strong{@include bg($bg:'reception/tooltip3.png');}
+	  	.intip-1{@include bg($bg:'reception/talk3-1.png'); width:216px; height:223px; top: -84px; left: 5px;z-index:3 }
+		.intip-2{@include bg($bg:'reception/talk3-2.png'); width:153px; height:207px; top: -157px; left: 86px;z-index:1 }
+		.intip-3{@include bg($bg:'reception/talk3-3.png'); width:172px; height:151px; top: -67px; left: 142px;z-index:2 }
+	  }
+	  .tooltip-04{ position: absolute; top: 132px; left: 949px;
+		strong{@include bg($bg:'reception/tooltip4.png');}
+	  	.intip-1{@include bg($bg:'reception/talk4-1.png'); width:145px; height:190px; top: -134px; left: 163px;z-index:2 }
+		.intip-2{@include bg($bg:'reception/talk4-2.png'); width:188px; height:188px; top: -74px; left: -31px;z-index:1 }
+		.intip-3{@include bg($bg:'reception/talk4-3.png'); width:224px; height:186px; top: -39px; left: 202px;z-index:3 }
+	  }
+    }
+    &-3{
+        @include set-area($bg:'reception/bg-sec-03.jpg', $height:'2665');
+        
+        .select-area{
+            @include pos-a($width:1100px,$height:185px,$left:50%,$top:1071px);
+            &>div{ width:1100px;height:185px;}
+            .login{@include bg($bg:'reception/bg-login.jpg')}
+            .seleced{@include bg($bg:'reception/bg-selected.jpg');
+                .choiced{position: absolute;
+                    top: 63px;
+                    left: 248px;
+                    font-size: 18px; color: #524230; line-height: 58px;
+                    width: 604px; text-indent: 0; padding-left: 20px;}
+            }
+            .jeje{@include bg($bg:'reception/bg-jeje.jpg')}
+            .limit{@include bg($bg:'reception/bg-limit.jpg')}
+            .finish{@include bg($bg:'reception/bg-finish.jpg')}
+            .select-box{@include bg($bg:'reception/bg-selectbox.jpg')}
+            
+        }
+        
+        .schedule-area{
+            @include pos-a($width:1209px,$height:754px,$left:50%,$top:1482px);
+            //@include bg($bg:'reception/bgp.png');
+            .tab01{
+                .tab li .num-01{background-position-y: 100%}
+                #tab-01{ display: block;
+                    @include bg($bg:'reception/bg-tit1.png',$position: 50% 60px);
+                    background-color: #ece9cc;
+                }
+            }
+            .tab02{
+                .tab li .num-02{background-position-y: 100%}
+                #tab-02{ display: block;
+                    @include bg($bg:'reception/bg-tit1.png',$position: 50% 60px);
+                    background-color: #ece9cc;
+                }
+            }
+            .tab03{
+                .tab li .num-03{background-position-y: 100%}
+                #tab-03{ display: block;
+                    @include bg($bg:'reception/bg-tit1.png',$position: 50% 60px);
+                    background-color: #ece9cc;
+                }
+            }
+            .tab04{
+                .tab li .num-04{background-position-y: 100%}
+                #tab-04{ display: block;
+                    @include bg($bg:'reception/bg-tit2.png',$position: 50% 60px);
+                    background-color: #ece9cc;
+                }
+            }
+            .tab05{
+                .tab li .num-05{background-position-y: 100%}
+                #tab-05{ display: block;
+                    @include bg($bg:'reception/bg-tit2.png',$position: 50% 60px);
+                    background-color: #ece9cc;
+                }
+            }
+            .tab06{
+                .tab li .num-06{background-position-y: 100%}
+                #tab-06{ display: block;
+                    @include bg($bg:'reception/bg-tit2.png',$position: 50% 60px);
+                    background-color: #ece9cc;
+                }
+            }
+            
+            .tab{overflow:hidden;
+                li{ float:left;
+                    a{ display: block; width: 203px; height: 74px;
+                        &.num-01{@include bg($bg:'reception/bg-tab.png');width:203px;background-position:0 0}
+                        &.num-02{@include bg($bg:'reception/bg-tab.png');width:201px;background-position:-203px  0}
+                        &.num-03{@include bg($bg:'reception/bg-tab.png');width:201px;background-position:-404px 0}
+                        &.num-04{@include bg($bg:'reception/bg-tab.png');width:201px; background-position: -605px 0}
+                        &.num-05{@include bg($bg:'reception/bg-tab.png');width:201px; background-position: -806px 0}
+                        &.num-06{@include bg($bg:'reception/bg-tab.png');width:202px;background-position:-1007px 0}
+                    }
+                }
+                
+            }
+            table, td {
+                border: 1px solid black;
+            }
+            .tab-content{ height: 680px; background-color: #ece9cc;
+                display: none;
+                table{ position: absolute; top:218px; left:34px; width: 1129px;text-indent: 0; border-collapse: collapse;background: #ffcdd9;
+                    td{ position: relative; height: 164px; color:#4b0414; font-size: 16px; text-align: center;
+					  	overflow:hidden;
+                        &.other{ color: #0f2951;
+						  
+						  &:before{ position: absolute; top:0; left:0; width:100%;display:block; padding-top: 100%; content:'';background: #6797f0;}
+                            a{ display: none;}
+                        }
+                        em,span,a{ position: relative;display: block;font-style: normal; font-weight: bold;}
+                        em{ padding-bottom: 15px;}
+                        
+                        .btn-booking{ display: inline-block;width: 130px; height: 43px;text-indent: -999em; margin-top: 16px;
+                            @include bg($bg:'reception/btn-booking.png');
+                        }
+                        .btn-cancel{display: inline-block;width: 130px; height: 43px;text-indent: -999em; margin-top: 16px;
+                            @include bg($bg:'reception/btn-cancel.png');
+                        }
+                    }
+                }
+            }
+            
+        }
+    }
+    &-4{
+        @include set-area($bg:'reception/bg-sec-04.jpg', $height:'1705');
+        .form-area{
+            div[class*='form-']{
+                @include pos-a($width:853px,$height:620px,$left:50%,$top:577px);
+                &.form-board{
+                    @include bg($bg:'reception/bg-form.jpg');
+                    table{text-indent: 0;
+                        th{text-indent: -999em}
+                        
+                    }
+                    input,textarea{@include pos-a($width:624px,$left:147px);
+                        font-size: 18px;
+                        color: #524230;
+                        border:1px solid #3a3e42;
+                        border-radius: 2px;
+                        padding:20px
+                    }
+                    input{ top:160px;line-height: 21px;}
+                    textarea{ top: 240px; height: 240px; line-height: 1.4;}
+                    [data-ui="custom-select"]{
+                        top:80px; left:147px; width: 667px;
+                        .opener{color:#524230}
+                        ul{ top: 59px;}
+                        li{ width: 624px;}
+                    }
+                }
+                
+                &.form-finish{@include bg($bg:'reception/bg-formend.jpg')}
+            }
+            .btn-link-reception{@include bg($bg:'reception/btn-reception.jpg');
+                width: 509px; height: 127px;
+            }
+        }
+        
+    }
+    &-5{
+        @include set-area($bg:'reception/bg-sec-05.jpg', $height:'1000');
+        .board-area{
+            @include pos-a($width:1282px,$height:412px,$left:50%,$top:354px);
+            
+            .board-wait{@include bg($bg:'reception/bg-wait.png'); height:412px;}
+            
+            .slick-2{ top: 7px;left: 100px;width: 1085px;
+                li{ width: 332px;margin:0 15px; text-align: center;text-indent: 0; letter-spacing: -2px;outline:none;
+                    img{box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.64);}
+                strong{ display: inline-block; width: 90px; height: 36px; line-height: 36px;color: #fff; font-size: 15px; margin-top: 20px;
+                    @include bg($bg:'reception/bg-tag.png');
+                    // 아이콘
+                    &.item{ background-position: 0 0;}
+                    &.pvp{ background-position: 0 -36px;}
+                    &.skill{ background-position: 0 -72px;}
+                    &.growth{ background-position: 0 100%;}
+                    
+                }
+                    dt{ font-size: 18px; font-weight: bold; padding: 25px 0 21px; border-bottom:2px solid #9f9e9e; line-height:1.4; height: 52px;}
+                    dd{ font-size: 15px; color: #4b4a4a; padding: 15px 0 5px;}
+                }
+                // 텍스트 컬러
+                .item{
+                    dt{color:#ed4d15;}
+                }
+                .pvp{
+                    dt{color:#1765e4;}
+                }
+                .skill{
+                    dt{color:#e8287e;}
+                }
+                .growth{
+                    dt{color:#24a103;}
+                }
+    
+    
+                .slick-prev, .slick-next {
+                    font-size: 0;
+                    line-height: 0;
+                    position: absolute;
+                    top: 112px;
+                    display: block;
+                    width: 46px; height: 69px;
+                    margin-top: -10px;
+                    padding: 0;
+                    cursor: pointer;
+                    color: transparent;
+                    border: none;
+                    outline: none;
+                    background: transparent;
+                }
+                .slick-prev {
+                    left:-102px;
+                    &:before {
+                        opacity:1;
+                        content: '';
+                        display: block;
+                        width: 49px; height: 72px;
+                        @include bg($bg: 'reception/btn-prev.png');
+                    }
+                }
+                .slick-next {
+                    right:-95px;
+                    &:before {
+                        opacity:1;
+                        content: '';
+                        display: block;
+                        width: 49px; height: 72px;
+                        @include bg($bg: 'reception/btn-next.png');
+                    }
+                }
+            }
+            
+        }
+    }
+
+    &-caution{
+        @include set-area($bg:'reception/bg-caution.jpg', $height:'370');
+    
+        .disc{
+            margin-top:129px;
+            line-height:24px;
+            position:relative;
+            left:50%;
+            width:$minWidth;
+            margin-left:-548px;
+            text-indent:0;
+            a{ font-weight:bold; }
+        }
+        ul{
+            font-size: 12px;
+        }
+        strong{ display: block; padding-top: 24px; font-size: 14px;}
+    }
+}
+
+
+
+
+[data-ui="custom-select"]{
+    position:absolute;
+    z-index:11;
+    top:63px;
+    left: 248px;
+    width:624px;
+    
+    .opener{
+        
+        height:58px;
+        display:block;
+        position:relative;
+        z-index:10;
+        cursor:pointer;
+        text-indent:0;
+        
+        padding:0 25px;
+        line-height:58px;
+        overflow:hidden;
+        color:#ab4710;
+        font-size:18px;
+        
+        &.active + ul{
+            display:block;
+        }
+    }
+    
+    ul{
+        position:absolute;
+        display:none;
+        top:58px;
+        left:0;
+        border:1px solid #3a3e42;
+        
+        li{
+            width:584px;
+            cursor:pointer;
+            text-indent:0;
+            padding: 20px;
+            background:#fff;
+            color:#524230;
+            font-size: 18px;
+            border-top:1px solid #3a3e42;
+            strong{
+                &.sub1{color: #2fbb00}
+                &.sub2{color: #214ffa}
+                &.sub3{color: #f81c79}
+                &.sub4{color: #ff551a}
+            }
+            span{padding: 0 5px;}
+            &:first-child{ border-top:none;}
+            &:hover{
+                background:#e0dcd6;
+            }
+        }
+    }
+}
+
+
+
+#layer-1{ @include bg($bg: 'reception/bg-layer.png'); width:894px; height:632px;
+    table{
+        td{ text-indent:0; font-size:18px; color:#524230; font-weight: bold;
+            letter-spacing: -1px;
+            input{ width: 20px; height: 20px; vertical-align: middle}
+            label{ padding-left:4px; padding-right:20px;}
+        }
+        div{ position: absolute;}
+    }
+    .subject{left:244px; top:270px}
+    .time{left:244px; top:350px}
+    .position{left:244px; top:434px}
+}
+/* layer tab contents */
+
+
