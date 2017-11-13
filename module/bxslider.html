@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://de.whalesoft.co.kr/common/js/jquery-1.12.4.min.js"></script>
+    <script src="http://de.whalesoft.co.kr/common/js/jquery.bxslider.min.js"></script>
+    <style>
+        .bx-wrapper .bx-viewport {
+            -moz-box-shadow: 0 0 5px #ccc;
+            -webkit-box-shadow: 0 0 5px #ccc;
+            box-shadow: 0 0 5px #ccc;
+            border: solid #fff 5px;
+            left: -5px;
+            background: #fff;
+        }
+        .bxslider2 li{ width: 200px; height: 200px;}
+        .bxslider2 li img{ width: 100%;}
+    </style>
+</head>
+<body>
+<ul class="bxslider">
+    <li><img src="http://via.placeholder.com/730x200.jpg" /></li>
+    <li><img src="http://via.placeholder.com/730x200.jpg" /></li>
+    <li><img src="http://via.placeholder.com/730x200.jpg" /></li>
+    <li><img src="http://via.placeholder.com/730x200.jpg" /></li>
+    <li><img src="http://via.placeholder.com/730x200.jpg" /></li>
+    <li><img src="http://via.placeholder.com/730x200.jpg" /></li>
+</ul>
+
+<ul class="bxslider2">
+    <li><img src="https://source.unsplash.com/200x200/?nature" alt=""></li>
+    <li><img src="https://source.unsplash.com/200x200/?nature" alt=""></li>
+    <li><img src="https://source.unsplash.com/200x200/?nature" alt=""></li>
+    <li><img src="https://source.unsplash.com/200x200/?nature" alt=""></li>
+    <li><img src="https://source.unsplash.com/200x200/?nature" alt=""></li>
+    <li><img src="https://source.unsplash.com/200x200/?nature" alt=""></li>
+    <li><img src="https://source.unsplash.com/200x200/?nature" alt=""></li>
+    <li><img src="https://source.unsplash.com/200x200/?nature" alt=""></li>
+    <li><img src="https://source.unsplash.com/200x200/?nature" alt=""></li>
+    <li><img src="https://source.unsplash.com/200x200/?nature" alt=""></li>
+    <li><img src="https://source.unsplash.com/200x200/?nature" alt=""></li>
+    <li><img src="https://source.unsplash.com/200x200/?nature" alt=""></li>
+    <li><img src="https://source.unsplash.com/200x200/?nature" alt=""></li>
+    <li><img src="https://source.unsplash.com/200x200/?nature" alt=""></li>
+    <li><img src="https://source.unsplash.com/200x200/?nature" alt=""></li>
+</ul>
+<script>
+    var ImagePauses = [1000,3000,6000,9000,12000,15000];
+
+    var slider = $('.bxslider').bxSlider();
+    modifyDelay(0);
+
+    function modifyDelay(startSlide){
+        slider.reloadSlider({
+            mode: 'horizontal',
+            infiniteLoop: true,
+            auto: true,
+            autoStart: true,
+            autoDirection: 'next',
+            autoHover: true,
+            pause: ImagePauses[startSlide],
+            autoControls: false,
+            pager: true,
+            pagerType: 'full',
+            controls: true,
+            captions: true,
+            speed: 500,
+            startSlide: startSlide,
+            onSlideAfter: function($el,oldIndex, newIndex){
+                modifyDelay(newIndex);
+            }
+        });
+    }
+
+    $('.bxslider2').bxSlider({
+        pager: false,
+        controls: false,
+        auto: true,
+        slideWidth: 5000,
+        startSlide: 0,
+        nextText: ' ',
+        prevText: ' ',
+        adaptiveHeight: true,
+        moveSlides: 1,
+        slideMargin: 20,
+        minSlides: 8,
+        maxSlides: 8
+    });
+
+</script>
+</body>
+</html>
