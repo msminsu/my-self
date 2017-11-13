@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <script src="http://de.whalesoft.co.kr/common/js/jquery-1.12.4.min.js"></script>
+    <script src="http://de.whalesoft.co.kr/common/js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="./js/test.js"></script>
+    <title>원형 메뉴</title>
+    <style>
+        * { margin: 0; padding: 0; }
+
+        ul { }
+
+        li { list-style: none }
+
+        .qmenu { width: 100%; }
+
+        .bx-controls-direction { position: absolute; top: 200px; z-index: 100 }
+
+        .bx-controls-direction a { width: 50px; height: 20px; background: gray; }
+
+        .qmenu { padding: 15px 0 }
+
+        .qmenu .section { margin: 0 auto; text-align: center; }
+
+        .qmenu .section .bx-viewport { overflow: visible !important }
+
+        .qmenu .bx-wrapper { width: auto !important; margin: 0 0px; /* position:static; */ }
+
+        /*.qmenu li{display:inline-block;text-align:center;width:12.5%}*/
+        .qmenu li a { width: 80px; height: 80px; background: #b7b7b7 no-repeat center center; display: block; margin: 0 auto; font-size: 12px; color: #444; font-weight: bold; letter-spacing: -1px; /* border-radius:100% */ }
+
+        .qmenu li a span { display: block; height: 20px; position: relative; top: 85px }
+
+        .qmenu li a:hover,
+        .qmenu li a:focus { background-color: #ffd800 }
+
+        .qmenu li { height: 104px }
+
+        /*.qmenu .bx-controls .bx-prev{left:0;background:#fff url('../img/qmenuL.gif') no-repeat center center}
+        .qmenu .bx-controls .bx-next{right:0;background:#fff url('../img/qmenuR.gif') no-repeat center center}*/
+
+        @media all and (max-width: 1000px) {
+            .qmenu li { width: 25% }
+
+            .qmenu .bx-wrapper { /* margin:0 40px!important; */ }
+        }
+
+        @media all and (max-width: 767px) {
+
+        }
+
+        @media all and (max-width: 580px) {
+
+        }
+
+        @media all and (max-width: 380px) {
+
+        }
+
+
+        body.gnb-open, body.page-navi-open {
+            height: 100%;
+            overflow: hidden;
+        }
+        body.gnb-open .dimd {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            content: '';
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 100;
+        }
+
+
+
+
+        #gnb {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 320px;
+            -webkit-transform: translate3d(320px,0,0);
+            transform: translate3d(320px,0,0);
+            background: #fff;
+            background-size: 134px 18px;
+            z-index: 1000;
+            padding: 50px 0 0 0;
+            -webkit-transition: all 0.5s;
+            transition: all 0.5s;
+        }
+
+        #gnb.open {
+            -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+        }
+
+    </style>
+</head>
+<body>
+<a href="#;" class="gnb-opener">▤</a>
+<div id="gnb">
+    <h2 class="sr-only">전체메뉴</h2>
+    <a href="#none" class="btn-close-gnb">메뉴닫기</a>
+
+    <ul class="quick-link-01">
+        <li><a href="#none">경남은행APP센터</a></li>
+        <li><a href="#none">영업점 찾기</a></li>
+    </ul>
+    <ul class="navi">
+        <div class="category">
+            <ul>
+                <li><a href="#menu-0" data-checked="checked" class="btn-depth-01 active">빠른조회서비스</a></li>
+                <li><a href="#menu-1" class="btn-depth-01 ">은행소개</a></li>
+                <li><a href="#menu-2" class="btn-depth-01 ">PB서비스</a></li>
+                <li><a href="#menu-3" class="btn-depth-01 ">고객센터</a></li>
+                <li><a href="#menu-4" class="btn-depth-01 ">부가서비스</a></li>
+            </ul>
+        </div>
+        <div class="category-depth">
+            <div id="menu-0" class="depth-02 active"><strong>빠른조회서비스</strong>
+                <ul>
+                    <li><a href="#none">환율조회</a></li>
+                    <li><a href="#none">수입LG발급 확인조회</a></li>
+                    <li><a href="#none">지급보증서발급조회</a></li>
+                </ul>
+            </div>
+            <div id="menu-1" clas
+                 s="depth-02 "><strong>은행소개</strong>
+                <ul>
+                    <li><a href="#none">경영이념</a></li>
+                    <li><a href="#none">새소식</a></li>
+                    <li><a href="#none">무빙뱅크/포터블 브랜치</a></li>
+                    <li><a href="#none">보도자료</a></li>
+                    <li><a href="#menu-1-4" class="btn-depth-02 ">영상관</a>
+                        <ul id="menu-1-4" class="depth-03 ">
+                            <li><a href="#none">홍보동영상</a></li>
+                            <li><a href="#none">TV CF</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#menu-1-5" class="btn-depth-02 ">SNS채널</a>
+                        <ul id="menu-1-5" class="depth-03 ">
+                            <li><a href="#none">페이스북</a></li>
+                            <li><a href="#none">인스타그램</a></li>
+                            <li><a href="#none">네이버블로그</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#menu-1-6" class="btn-depth-02 ">채용정보</a>
+                        <ul id="menu-1-6" class="depth-03 ">
+                            <li><a href="#none">인재상</a></li>
+                            <li><a href="#none">인재양성</a></li>
+                            <li><a href="#none">인사제도</a></li>
+                            <li><a href="#none">복지제도</a></li>
+                            <li><a href="#none">채용소식</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div id="menu-2" class="depth-02 "><strong>PB서비스</strong>
+                <ul>
+                    <li><a href="#none">PB소개</a></li>
+                    <li><a href="#menu-2-1" class="btn-depth-02 ">PB서비스안내</a>
+                        <ul id="menu-2-1" class="depth-03 ">
+                            <li><a href="#none">자산관리서비스</a></li>
+                            <li><a href="#none">전문가자문서비스</a></li>
+                            <li><a href="#none">Total Life Care 서비스</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#none">WM칼럼</a></li>
+                    <li><a href="#none">은퇴칼럼</a></li>
+                </ul>
+            </div>
+            <div id="menu-3" class="depth-02 "><strong>고객센터</strong>
+                <ul>
+                    <li><a href="#none">자주하는질문</a></li>
+                    <li><a href="#none">고객센터이용안내</a></li>
+                    <li><a href="#menu-3-2" class="btn-depth-02 ">금리조회</a>
+                        <ul id="menu-3-2" class="depth-03 ">
+                            <li><a href="#none">예금금리</a></li>
+                            <li><a href="#none">대출금리</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#menu-3-3" class="btn-depth-02 ">수수료안내</a>
+                        <ul id="menu-3-3" class="depth-03 ">
+                            <li><a href="#none">예금수수료</a></li>
+                            <li><a href="#none">대출수수료</a></li>
+                            <li><a href="#none">송금/추심수수료</a></li>
+                            <li><a href="#none">신용카드수수료</a></li>
+                            <li><a href="#none">외환수수료및이율</a></li>
+                            <li><a href="#none">전자금융/기타수수료</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#none">소비자보호 자료실</a></li>
+                </ul>
+            </div>
+            <div id="menu-4" class="depth-02 "><strong>부가서비스</strong>
+                <ul>
+                    <li><a href="#none">지점/ATM찾기</a></li>
+                    <li><a href="#none">모바일APP센터</a></li>
+                    <li><a href="#none">이벤트</a></li>
+                    <li><a href="#menu-4-5" class="btn-depth-02 ">금융계산기</a>
+                        <ul id="menu-4-5" class="depth-03 ">
+                            <li><a href="#none">예금계산기</a></li>
+                            <li><a href="#none">대출계산기</a></li>
+                            <li><a href="#none">카드계산기</a></li>
+                            <li><a href="#none">환율계산기</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </ul>
+
+    <ul class="quick-link-02">
+        <li><a href="#none">금융계산기</a></li>
+        <li><a href="#none">수수료안내</a></li>
+        <li><a href="#none">이용시간안내</a></li>
+    </ul>
+
+    <div class="contact">
+        <p class="tel">고객센터 <a href="tel:1588-8585">1600-8585</a> / <a href="tel:1588-8585">1588-8585</a></p>
+        <p class="open">평일 09:00 ~ 18:00 / 토요일 09:00 ~ 13:00(한국시간기준)</p>
+    </div>
+</div>
+<div class="qmenu">
+    <div class="section">
+        <ul>
+            <li class="qm1">
+                <a style="background-image:url('/data/quickMenu/h16/1484821308012')"
+                   href="/cs/intro/search/index.do?menu_idx=8">
+                    <span>자료검색</span></a></li>
+            <li class="qm2">
+                <a style="background-image:url('/data/quickMenu/h16/1484821319528')"
+                   href="/cs/intro/search/loan/index.do?menu_idx=115">
+                    <span>대출조회/예약</span></a></li>
+            <li class="qm3">
+                <a style="background-image:url('/data/quickMenu/h16/1484821326207')"
+                   href="/cs/intro/search/hope/index.do?menu_idx=16">
+                    <span>희망도서신청</span></a></li>
+            <li class="qm4">
+                <a style="background-image:url('/data/quickMenu/h16/1484821302295')" target="_blank"
+                   href="http://www.nl.go.kr/nill/user/index.jsp">
+                    <span>책바다</span></a></li>
+            <li class="qm5">
+                <a style="background-image:url('/data/quickMenu/h16/1484821383086')" href="/cs/html.do?menu_idx=90">
+                    <span>이용안내</span></a></li>
+            <li class="qm6">
+                <a style="background-image:url('/data/quickMenu/h16/1485170537491')"
+                   href="/cs/board/index.do?menu_idx=74&manage_idx=228">
+                    <span>자주하는질문</span></a></li>
+            <li class="qm7">
+                <a style="background-image:url('/data/quickMenu/h16/1484821423512')"
+                   href="http://www.gbelib.kr/cs/module/calendarManage/index.do?menu_idx=104">
+                    <span>이달의행사</span></a></li>
+            <li class="qm8">
+                <a style="background-image:url('/data/quickMenu/h16/1484821413037')"
+                   href="http://www.gbelib.kr/cs/module/quizReq/index.do?menu_idx=41">
+                    <span>독서퀴즈</span></a></li>
+            <li class="qm9">
+                <a style="background-image:url('/data/quickMenu/h16/1485170551995')" target="_blank"
+                   href="http://dovol.youth.go.kr/dovol/index.do">
+                    <span>자원봉사신청</span></a></li>
+
+        </ul>
+    </div>
+</div>
+<div class="dimd"></div>
+<script>
+    $(document).ready(function () {
+        pageMain.init();
+
+
+        $(document).on('click', '.gnb-opener', function (e) {
+            e.preventDefault();
+            $('body, html').addClass('gnb-open');
+            $('#gnb').addClass('open');
+        });
+
+        $(document).on('click', '.btn-close-gnb', function (e) {
+            e.preventDefault();
+            $('#gnb').removeClass('open');
+        });
+
+        $(document).on('click', '.dimd', function (e) {
+            e.preventDefault();
+            $('#gnb').removeClass('open');
+        });
+
+        $('#gnb').on('transitionend', function(){
+            if(!$('#gnb').hasClass('open')){
+                $('body, html').removeClass('gnb-open');
+            }
+        });
+
+
+    });
+
+</script>
+
+</body>
+</html>

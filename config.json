@@ -1,14 +1,14 @@
 {
-	"game": "aion",
-	"author": "NCSOFT",
+	"project": "moduleStudy",
+	"author": "an-gun",
 	"drive": {
 		"window": "Z:",
 		"mac": "/Volumes/wwwroot"
 	},
 	"sass_output": "compact",
 
-	"name": "aion 171025_service",
+	"name": "book",
 	"year": "2017",
-	"category": "event",
-	"folder": "171025_service"
+	"category": "",
+	"folder": "module"
 }

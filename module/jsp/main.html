@@ -1,0 +1,492 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <link rel="stylesheet" href="../../../common/css/fontawesome.min.css">
+    <script type="text/javascript" src="../../../common/js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../../../common/js/jquery-ui-1.12.0.min.js"></script>
+    <script type="text/javascript" src="../../../common/js/jquery-ui-1.12.1-datepicker.min.js"></script>
+    <!--<script type="text/javascript" src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>-->
+    <script type="text/javascript" src="../../../common/js/jquery.bxslider.min.js"></script>
+
+    <link rel="stylesheet" href="../css/defualt.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script type="text/javascript" src="../js/default.js"></script>
+
+    <title>인천광역시 연수도서관</title>
+</head>
+<body>
+<div id="wrap">
+    <!--header-->
+    <div id="header">
+        <!--topbar-->
+        <div id="tnbWrap">
+            <div class="section">
+                <div class="util">
+                    <ul>
+                        <li><a href="#;">홈으로</a></li>
+                        <li><a href="#;">로그인</a></li>
+                        <li><a href="#;">회원가입</a></li>
+                        <li><a href="#;">My Library</a></li>
+                        <li><a href="#;">사이트맵</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--topbar-->
+        <!--gnb-->
+        <div id="gnbWrap">
+            <div class="section">
+                <h1 class="logo"><a href="#;">인천광역시 연수도서관</a></h1>
+                <div class="mmode">
+                    <a href="#menu">전체 메뉴보기</a>
+                </div>
+                <div class="gnb">
+                    <ul class="gnbMenu">
+                        <li><a href="#">자료검색</a>
+                            <div class="subMenu" style="display:none">
+                                <ul>
+                                    <li><a href="">인사말</a></li>
+                                    <li><a href="">도서관연혁</a></li>
+                                    <li><a href="">운영방향</a></li>
+                                    <li><a href="">조직현황</a></li>
+                                    <li><a href="">자료현황</a></li>
+                                    <li><a href="">시설현황</a></li>
+                                    <li><a href="">찾아오시는길</a></li>
+                                </ul>
+                                <!-- <ul>
+                                     <li><a href="">우리도서관자료검색</a></li>
+                                     <li><a href="">타도서관자료검색</a></li>
+                                     <li><a href="">연속간행물안내</a></li>
+                                     <li><a title="새창 이동" href="http://www.nl.go.kr/kolisnet/kolis/kolis.php"><span>국가자료목록검색</span><i
+                                             class="fa fa-external-link"></i></a></li>
+                                     <li><a href="">DVD검색</a></li>
+                                     <li><a href="">신착도서안내</a></li>
+                                     <li><a href="">도서대출베스트</a></li>
+                                     <li><a href="">이달의추천도서</a></li>
+                                     <li><a href="">야간예약대출</a></li>
+                                     <li><a href="">국회원문 DB</a></li>
+                                     <li><a href="">도서무료택배서비스(책나눔)</a></li>
+                                     <li><a title="새창 이동" href="http://www.nl.go.kr/nill/user/index.jsp"><span>도서택배서비스(책바다)</span><i
+                                             class="fa fa-external-link"></i></a></li>
+                                     <li><a href="">상호대차(책마실)</a></li>
+                                     <li><a title="새창 이동" href="http://kiss.kstudy.com/"><span>KISS(한국학술정보)</span><i
+                                             class="fa fa-external-link"></i></a></li>
+                                     <li><a href="">WEB DB 검색서비스</a></li>
+                                     <li><a href="">온라인참고정보원</a></li>
+                                     <li><a href="">희망도서신청</a></li>
+                                 </ul>-->
+                            </div>
+                        </li>
+                        <li><a href="#">이용안내</a>
+                            <div class="subMenu">
+                                <ul>
+                                    <li><a href="">이용안내</a></li>
+                                    <li><a href="">자료실안내</a></li>
+                                    <li><a href="">이동도서관</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">도서관서비스</a>
+                            <div class="subMenu">
+                                <ul>
+                                    <li><a href="">이달의행사</a></li>
+                                    <li><a href="">영화상영안내</a></li>
+                                    <li><a href="">메일링서비스</a></li>
+                                    <li><a href="">순회문고안내</a></li>
+                                    <li><a href="">학교도서관지원</a></li>
+                                    <li><a href="">기후생태학습관</a></li>
+                                    <li><a href="">특색사업</a></li>
+                                    <li><a href="">다자녀우대대출카드</a></li>
+                                    <li><a href="">동아리모임</a></li>
+                                    <li><a href="">디지털자료실좌석예약이용안내</a></li>
+                                    <li><a href="">열람실좌석현황</a></li>
+                                    <li><a href="">동화읽는어른모임</a></li>
+                                    <li><a href="">어르신의이야기보따리</a></li>
+                                    <li><a href="">독서지도연구회</a></li>
+                                    <li><a href="">도서관 및 기타사이트</a></li>
+                                    <li><a href="">도서관견학신청</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">평생학습</a>
+                            <div class="subMenu">
+                                <ul>
+                                    <li><a href="">평생학습소개</a></li>
+                                    <li><a href="">평생학습온라인접수</a></li>
+                                    <li><a href="">교육강사안내</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">열린마당</a>
+                            <div class="subMenu">
+                                <ul>
+                                    <li><a href="">공지사항</a></li>
+                                    <li><a href="">보도자료</a></li>
+                                    <li><a href="">사진자료실</a></li>
+                                    <li><a href="">동영상자료실</a></li>
+                                    <li><a href="">FAQ</a></li>
+                                    <li><a href="">사서에게물어보세요</a></li>
+                                    <li><a href="">도서관에바란다</a></li>
+                                    <li><a href="">자유게시판</a></li>
+                                    <li><a href="">설문조사</a></li>
+                                    <li><a href="">대출카드분실신고</a></li>
+                                    <li><a href="">부패신고</a></li>
+                                    <li><a href="">각종양식내려받기</a></li>
+                                    <li><a href="">분실물안내</a></li>
+                                    <li><a href="">좋은책제안</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">도서관소개</a>
+                            <div class="subMenu">
+                                <ul>
+                                    <li><a href="">도서관현황</a></li>
+                                    <li><a href="">주요사업안내</a></li>
+                                    <li><a href="">도서관발간자료</a></li>
+                                    <li><a href="">도서관관련법규</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#" class="last">정보공개</a>
+                            <div class="subMenu">
+                                <ul>
+                                    <li><a href="">정보공개제도안내</a></li>
+                                    <li><a href="">청구및처리절차</a></li>
+                                    <li><a title="새창 이동" href="https://www.open.go.kr/"><span>정보공개청구</span><i
+                                            class="fa fa-external-link"></i></a></li>
+                                    <li><a href="">사전정보공개</a></li>
+                                    <li><a href="">정보목록</a></li>
+                                    <li><a href="">비공개대상세부기준</a></li>
+                                    <li><a href="">공공데이터 개방</a></li>
+                                    <li><a href="">계약과정정보공개</a></li>
+                                    <li><a href="">수의계약내역</a></li>
+                                    <li><a href="">사전공표대상정보</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mask"></div>
+            </div>
+        </div>
+        <!--gnb-->
+    </div>
+    <!--header-->
+    <!--Container-->
+    <div id="Container">
+        <div class="section">
+            <!--검색창-->
+            <div class="searchBox">
+                <label for="search-text">통합검색서비스</label>
+                <div class="box">
+                    <div class="input-wrap">
+                        <input name="search-text" id="search-text" type="text" class="text" placeholder="검색어를 입력하세요">
+                    </div>
+                    <button class="btn-search">통합검색</button>
+                </div>
+            </div>
+
+            <!-- 퀵메뉴 -->
+            <ul class="quickMenu">
+                <li><a href="#;"><img src="/ROOT/siteTemplete/ice_yslib/img/quick-1.png"
+                                      alt=""><strong>내서재</strong><span>대출조회 및 연기</span></a></li>
+                <li><a href="#;"><img src="/ROOT/siteTemplete/ice_yslib/img/quick-2.png"
+                                      alt=""><strong>희망도서신청</strong><span>원하시는 책 신청하세요!</span></a></li>
+                <li><a href="#;"><img src="/ROOT/siteTemplete/ice_yslib/img/quick-3.png"
+                                      alt=""><strong>평생학습강좌신청</strong><span>온라인 수강신청</span></a></li>
+                <li><a href="#;"><img src="/ROOT/siteTemplete/ice_yslib/img/quick-4.png" alt=""><strong>열람실좌석현황</strong><span>좌석현황 검색</span></a>
+                </li>
+                <li><a href="#;"><img src="/ROOT/siteTemplete/ice_yslib/img/quick-5.png"
+                                      alt=""><strong>디지털자료실예약</strong><span>온라인 좌석예약</span></a></li>
+                <li><a href="#;"><img src="/ROOT/siteTemplete/ice_yslib/img/quick-6.png"
+                                      alt=""><strong>봉사활동신청</strong><span>나에게 맞는 봉사활동<br>신청하세요!</span></a></li>
+            </ul>
+
+            <!--공지사항-->
+            <div class="notice tab">
+                <ul class="tabMenu">
+                    <li class="on"><a href="#tab1">공지사항</a></li>
+                    <li><a href="#tab2">신차자료</a></li>
+                </ul>
+                <a class="btn more" href="#">더보기</a>
+                <div class="con" data-tab="tab1">
+                    <ul>
+                        <li>
+                            <a href="#;"><strong>지방공무원 결원대체 기간제근로자채용 공고</strong>
+                                <span class="txt">지방공무원 결원대체 기간제근로자를 다음과 같이 채용 공고 합니다. </span>
+                                <span class="fbox"><span>2017-07-01</span><em>공지사항</em></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#;"><strong>지방공무원 결원대체 기간제근로자채용 공고</strong>
+                                <span class="txt">지방공무원 결원대체 기간제근로자를 다음과 같이 채용 공고 합니다. </span>
+                                <span class="fbox"><span>2017-07-01</span><em>공지사항</em></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#;"><strong>지방공무원 결원대체 기간제근로자채용 공고</strong>
+                                <span class="txt">지방공무원 결원대체 기간제근로자를 다음과 같이 채용 공고 합니다. </span>
+                                <span class="fbox"><span>2017-07-01</span><em>공지사항</em></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#;"><strong>지방공무원 결원대체 기간제근로자채용 공고</strong>
+                                <span class="txt">지방공무원 결원대체 기간제근로자를 다음과 같이 채용 공고 합니다. </span>
+                                <span class="fbox"><span>2017-07-01</span><em>공지사항</em></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="con" data-tab="tab2" style="display: none;">
+                    <ul>
+                        <li>
+                            <a href="#;"><strong>기간제근로자채용 공고 지방공무원 결원대체</strong>
+                                <span class="txt">지방공무원 결원대체 기간제근로자를 다음과 같이 채용 공고 합니다. </span>
+                                <span class="fbox"><span>2017-07-01</span><em>공지사항</em></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#;"><strong>기간제근로자채용 공고 지방공무원 결원대체</strong>
+                                <span class="txt">지방공무원 결원대체 기간제근로자를 다음과 같이 채용 공고 합니다. </span>
+                                <span class="fbox"><span>2017-07-01</span><em>공지사항</em></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#;"><strong>기간제근로자채용 공고 지방공무원 결원대체</strong>
+                                <span class="txt">지방공무원 결원대체 기간제근로자를 다음과 같이 채용 공고 합니다. </span>
+                                <span class="fbox"><span>2017-07-01</span><em>공지사항</em></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#;"><strong>기간제근로자채용 공고 지방공무원 결원대체</strong>
+                                <span class="txt">지방공무원 결원대체 기간제근로자를 다음과 같이 채용 공고 합니다. </span>
+                                <span class="fbox"><span>2017-07-01</span><em>공지사항</em></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--팝업존-->
+            <div class="popupZone">
+                <div class="popup-list">
+                    <ul>
+                        <li><a href="#" class="popupImg"><img src="/ROOT/siteTemplete/ice_yslib/img/popup-img.jpg"></a>
+                        </li>
+                        <li><a href="#" class="popupImg"><img src="/ROOT/siteTemplete/ice_yslib/img/popup-img.jpg"></a>
+                        </li>
+                        <li><a href="#" class="popupImg"><img src="/ROOT/siteTemplete/ice_yslib/img/popup-img.jpg"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="rowbox">
+                <div class="column">
+                    <!--추천도서-->
+                    <div class="boxWrap">
+                        <div class="book">
+                            <h3>추천도서</h3>
+                            <ul class="book-controls">
+                                <li><a class="btn prev" href="#prev">이전</a></li>
+                                <li><a class="btn next" href="#next">다음</a></li>
+                                <li><a class="btn more" href="#">더보기</a></li>
+                            </ul>
+                            <div class="bookContent">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                        <span class="bookImg">
+                                            <img src="/ROOT/siteTemplete/ice_yslib/img/book.jpg">
+                                            <img src="/ROOT/siteTemplete/ice_yslib/img/ico-tag.png" class="tag">
+                                        </span>
+                                            <span class="bookEx">
+                                            <strong class="title">로봇 시대1, 인간의 일</strong>
+                                            <span class="divid"><em>구본권 <i></i></em>어크로스</span>
+                                            <span class="code">아843-산211ㄱ</span>
+                                            <span class="desc">IT 전문 저널리스트로 활동하며 기술과 사람이 건강한 관계를 구축할 방도를 모색해온 디지털 인문학자가 내놓은..</span>
+                                        </span>
+                                        </a>
+                                    </li>
+                                    <!--<li>
+                                        <a href="#">
+                                            <span class="bookImg">
+                                                <img src="/ROOT/siteTemplete/ice_yslib/img/book.jpg">
+                                                <img src="/ROOT/siteTemplete/ice_yslib/img/ico-tag.png" class="tag">
+                                            </span>
+                                            <span class="bookEx">
+                                                <strong class="title">로봇 시대1, 인간의 일</strong>
+                                                <span class="divid"><em>구본권 <i></i></em>어크로스</span>
+                                                <span class="code">아843-산211ㄱ</span>
+                                                <span class="desc">IT 전문 저널리스트로 활동하며 기술과 사람이 건강한 관계를 구축할 방도를 모색해온 디지털 인문학자가 내놓은..</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="bookImg">
+                                                <img src="/ROOT/siteTemplete/ice_yslib/img/book.jpg">
+                                                <img src="/ROOT/siteTemplete/ice_yslib/img/ico-tag.png" class="tag">
+                                            </span>
+                                            <span class="bookEx">
+                                                <strong class="title">로봇 시대1, 인간의 일</strong>
+                                                <span class="divid"><em>구본권 <i></i></em>어크로스</span>
+                                                <span class="code">아843-산211ㄱ</span>
+                                                <span class="desc">IT 전문 저널리스트로 활동하며 기술과 사람이 건강한 관계를 구축할 방도를 모색해온 디지털 인문학자가 내놓은..</span>
+                                            </span>
+                                        </a>
+                                    </li>-->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--추천영화-->
+                    <div class="boxWrap">
+                        <div class="movie">
+                            <h3>영화상영</h3> <a class="btn more" href="">더보기</a>
+                            <div class="movieContent">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                         <span class="movieImg">
+                                            <img src="/ROOT/siteTemplete/ice_yslib/img/movie.jpg">
+                                        </span>
+                                            <span class="movieEx">
+                                            <strong class="title">위대한 개츠비</strong>
+                                            <span class="date">2017.07.22(토) </span>
+                                            <span class="time">오후 2시</span>
+                                            <span class="divid"><em>드라마<i></i></em>15세관람가</span>
+                                            <span class="desc">1922년 뉴욕 외곽에서 살고 있는 닉은 호화로 운 별장에 살고 있는..</span>
+                                        </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="column">
+                    <!--바로가기-->
+                    <div class="boxWrap">
+                        <div class="quickLink">
+                            <h3>바로가기</h3>
+                            <ul>
+                                <li class="first"><a href="#;"> <img src="/ROOT/siteTemplete/ice_yslib/img/link-1.png"
+                                                                     alt=""><span>전자도서관</span></a></li>
+                                <li><a href="#;"> <img src="/ROOT/siteTemplete/ice_yslib/img/link-2.png" alt=""><span>책바다</span></a>
+                                </li>
+                                <li class="blue"><a href="#;"> <img src="/ROOT/siteTemplete/ice_yslib/img/link-3.png"
+                                                                    alt=""><span>책나래</span></a></li>
+                                <li class="last"><a href="#;"> <img src="/ROOT/siteTemplete/ice_yslib/img/link-4.png"
+                                                                    alt=""><span>사서에게<br>물어보세요</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--달력-->
+                    <div class="boxWrap">
+                        <div class="calenderWrap">
+                            <h3>휴관일 및 행사안내</h3>
+                            <a href="#" class="btn more">더보기</a>
+                            <div class="cont">
+                                <div id="datepicker">
+                                    <div class="todayChart">
+                                        <p>TODAY</p>
+                                        <strong class="nowDate">23</strong>
+                                        <ul class="checkList">
+                                            <li><span class="today">오늘</span></li>
+                                            <li><span class="hoil">휴관일</span></li>
+                                            <li><span class="event">행사일</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--배너-->
+            <div class="banner">
+                <div class="bannerWrap">
+                    <h3>배너모음</h3>
+                    <ul class="bannerBtn">
+                        <li><a class="prev" href="#prev">이전</a></li>
+                        <li><a class="stop active" href="#stop">정지</a></li>
+                        <li><a class="play" href="#play">시작</a></li><!-- 기본값 display:none -->
+                        <li><a class="next" href="#next">다음</a></li>
+                        <li><a class="more" href="#more">더보기</a></li>
+                    </ul>
+                    <div class="bannerBox">
+                        <ul class="bannerImg">
+                            <li><a href="#;"><img src="/ROOT/siteTemplete/ice_yslib/img/banner-1.gif" alt=""></a></li>
+                            <li><a href="#;"><img src="/ROOT/siteTemplete/ice_yslib/img/banner-2.gif" alt=""></a></li>
+                            <li><a href="#;"><img src="/ROOT/siteTemplete/ice_yslib/img/banner-3.gif" alt=""></a></li>
+                            <li><a href="#;"><img src="/ROOT/siteTemplete/ice_yslib/img/banner-4.gif" alt=""></a></li>
+                            <li><a href="#;"><img src="/ROOT/siteTemplete/ice_yslib/img/banner-5.gif" alt=""></a></li>
+                            <li><a href="#;"><img src="/ROOT/siteTemplete/ice_yslib/img/banner-6.gif" alt=""></a></li>
+                            <!--   <li><a href=""><img src="/ROOT/siteTemplete/ice_yslib/img/banner-1.gif" alt=""></a></li>
+                               <li><a href=""><img src="/ROOT/siteTemplete/ice_yslib/img/banner-2.gif" alt=""></a></li>
+                               <li><a href=""><img src="/ROOT/siteTemplete/ice_yslib/img/banner-3.gif" alt=""></a></li>
+                               <li><a href=""><img src="/ROOT/siteTemplete/ice_yslib/img/banner-4.gif" alt=""></a></li>
+                               <li><a href=""><img src="/ROOT/siteTemplete/ice_yslib/img/banner-5.gif" alt=""></a></li>
+                               <li><a href=""><img src="/ROOT/siteTemplete/ice_yslib/img/banner-6.gif" alt=""></a></li>-->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Container-->
+    <!--footer-->
+    <div id="footWrap">
+        <div class="footer">
+            <div class="section">
+                <ul class="info">
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">영상정보처리기기운영관리방침</a></li>
+                    <li><a href="#">도서관서비스현장</a></li>
+                    <li><a href="#">찾아오시는길</a></li>
+                </ul>
+                <div class="siteLink">
+                    <select>
+                        <option>유관기관사이트</option>
+                    </select><a href="#">이동</a>
+                    <select>
+                        <option>인천광역시공공도서관</option>
+                    </select><a href="#">이동</a>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="address">
+                <dl>
+                    <dt>주소 :</dt>
+                    <dd>(우)21554 인천광역시 연수구 함박뫼로 152번길 96</dd>
+                </dl>
+                <dl>
+                    <dt>TEL :</dt>
+                    <dd>032)899-7500</dd>
+                </dl>
+                <dl>
+                    <dt>FAX :</dt>
+                    <dd>032)814-7551</dd>
+                </dl>
+                <span>Copyright ⓒ INCHEON METROPOLITAN YEONSU LIBRARY. All Rights Reserved.</span>
+                <ul class="sns">
+                    <li><a href="" class="facebook" title="페이스북로 이동">페이스북</a></li>
+                    <!-- <li><a href="" class="blog" title="블로그로 이동">블로그</a></li>
+                     <li><a href="" class="kakao" title="카카오스토리로 이동">카카오스토리</a></li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+</div>
+</body>
+</html>

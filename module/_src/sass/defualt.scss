@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+@import "util/normalize";
+@import "util/variable";
+@import "util/mixin";
+
+/* defualt setting */
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select, strong { margin: 0; padding: 0; letter-spacing: -1px; }
+
+html, body { min-width: $minWidth; }
+
+body { background: $bodyColor; color: $fontColor; margin: 0; padding: 0; font-family: $fontFamily; font-size: $baseFontSize; line-height: 1; }
+
+button { outline: 0; background: none; border: 0; cursor: pointer; }
+
+img { border: 0; vertical-align: top }
+
+ul, ol { list-style: none; }
+
+em{ font-style: normal;}
+
+table { border-spacing: 0; }
+
+caption { height: 0; overflow: hidden; font-size: 0; }
+
+a { color: $linkColor; text-decoration: none }
+
+a:hover { color: $linkColor; }
+
+.section { max-width: 1260px; margin: 0 auto; }
+
+/* util */
+#tnbWrap { overflow: hidden; position: relative; background: #363636; }
+
+.util { float: right;
+  ul { overflow: hidden;
+    li { float: left;
+      a { display: block; height: 45px; margin-left: 10px; padding: 0 4px; line-height: 45px; font-size: 13px; color: #fff; font-weight: 500; }
+    }
+  }
+  
+}
+
+/* Gnb */
+
+#gnbWrap { position: relative;padding:20px 0 19px; border-bottom:1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  .section{@include clearfix();}
+  .mmode{ display:none;position: absolute; right: 0; top: 37px;
+    a{ display: block; width: 26px; height: 27px;@include bg($bg: 'ico-mmenu.gif');text-indent: -999em;}
+  }
+  .logo {float:left;
+    a {
+      @include bg($bg: 'logo.png');
+      display: block; width: 209px; height: 46px; text-indent: -999em;
+    }
+  }
+  .gnb { float:right; padding-top: 17px;
+    .gnbMenu {
+      @include clearfix();
+      > li { float: left;
+        &:last-child{
+          a{ padding-right:0;}
+        }
+        > a { padding:35px 28px 31px;font-size: 17px; font-weight: 500;color: #2f2f2f;
+          &:hover{color:#004be3;}
+        }
+      }
+    }
+    .subMenu { display: none;position: absolute; top: 86px;left:0;right:0;width: 100%; background:#004be3;
+      ul{ text-align: center;
+        li{ display: inline-block;
+          a{ display:block; padding:13px 9px;font-size: 14px;color:#fff;
+            &:hover{ font-weight: bold;color:#fb0}
+          }
+        }
+      }
+    }
+  }
+  
+}
+
+/* lnb */
+
+/* footer */
+#footWrap{ font-size: 13px;}
+.footer{overflow:hidden;background: #ebedf1; border: 1px solid #d3d7db;
+  .info{ float: left; padding: 14px; padding-left: 0;
+    li{
+      float:left;
+      &:first-child{ a{ padding-left: 0;font-weight: 500;color:#000;
+        &:before{display:none}
+      }}
+      a{padding:0 14px;
+        &:before{display:block; position: absolute; content:''; width: 1px; height: 15px; background: #959799;}
+      }
+    }
+  }
+  .siteLink{ float: right;    border-left: 1px solid #d3d7db;
+    select {
+      float:left;
+      border: 0;
+      width: 161px;
+      height: 41px;
+      padding-left: 13px;
+      font-size: 13px;
+      color: #5c5c5c;
+      border-right: 1px solid #d3d7db;
+    }
+    a{ float: left;
+      display: block;
+      padding: 14px 10px;
+      color: #5c5c5c;
+      background: #e1e4ea;
+      border-right: 1px solid #d3d7db;
+    }
+  }
+}
+.address{
+  position: relative; padding-top: 20px; padding-bottom: 45px; line-height: 1.4;
+  dl{overflow:hidden; float: left;
+    &:first-child{ dt{@include txtint(); margin-left: -100px;}}
+    dt{
+      float:left;
+      font-weight: 500;
+    }
+    dd{float:left; margin-right: 10px;letter-spacing: -0.4px;}
+  }
+  span{ display: block; clear: both; font-size: 11px;letter-spacing: 0px;}
+  .sns{ overflow: hidden; position: absolute; top: 18px; right:8px;
+    li{ float: left;
+      a{ display: block; width: 29px; height: 29px; margin-left: 8px;vborder-radius: 30px;text-indent: -999em;
+        &.facebook{@include bg($bg: 'ico-facebook.png');}
+        &.blog{@include bg($bg: 'ico-blog.png');}
+        &.kakao{@include bg($bg: 'ico-kakao.png');}
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1000px) { /**/
+  #tnbWrap { display: none; }
+  .gnb { display: none; }
+  .mmode { display: block !important; padding-right: 10px; float: right; position: relative; bottom: 30px; }
+  #gnbWrap { height: 50px; }
+  #gnbWrap h1 { text-align: center; width: 100%; }
+  #footer .footer1 { display: none; }
+  #footer { border-top: 1px solid #e4e4e4; }
+  /**/
+}
