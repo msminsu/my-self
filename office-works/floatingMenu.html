@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <style>
+        .target{height:700px;}
+        .quick-menu{position:absolute; top:200px; right:100px; background: #fff; margin:0; padding: 0;}
+        .quick-menu.fix{ position: fixed;}
+        li{list-style:none}
+        a{display: block;padding:5px;20px; color:#333; text-decoration: none;}
+        .on a{background:tomato}
+    </style>
+</head>
+<body>
+<div class="target" id="box01"></div>
+<div class="target" id="box02"></div>
+<div class="target" id="box03"></div>
+<div class="target" id="box04"></div>
+<div class="target" id="box05"></div>
+<div class="target" id="box06"></div>
+<div class="target" id="box07"></div>
+<div class="target" id="box08"></div>
+<div class="target" id="box09"></div>
+<div class="target" id="box10"></div>
+
+
+<ul class="quick-menu">
+    <li><a href="#box01">컨텐츠01</a></li>
+    <li><a href="#box02">컨텐츠02</a></li>
+    <li><a href="#box03">컨텐츠03</a></li>
+    <li><a href="#box04">컨텐츠04</a></li>
+    <li><a href="#box05">컨텐츠05</a></li>
+    <li><a href="#box06">컨텐츠06</a></li>
+    <li><a href="#box07">컨텐츠07</a></li>
+    <li><a href="#box08">컨텐츠08</a></li>
+    <li><a href="#box09">컨텐츠09</a></li>
+    <li><a href="#box10">컨텐츠10</a></li>
+</ul>
+
+</body>
+
+<script>
+    $(document).ready(function(){
+        var _boxs = $('.target');
+        _boxs.each(function(index){
+        _boxs.eq(index).css({'height':Math.floor((Math.random()+10) *100)+'px','background':"#"+Math.floor(Math.random()*(16777215)).toString(16)});
+        })
+
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        pageMain.init();
+    });
+
+    var pageMain = (function(){
+        var quick;
+
+        quick = function(){
+            var $menu = $('.quick-menu li'),
+                $contents = $('.target'),
+                btnTop = $('.top'),
+                $doc = $('html, body');
+            var scltop = $(window).scrollTop();
+
+            console.log($menu);
+
+            if (!(744 <= scltop)) $menu.removeClass('on');
+
+            $menu.on('click','a', function(e){
+                console.log('click');
+                e.preventDefault();
+                var target = $(this).attr("href"),
+                    offsetTop = $(target).offset().top;
+
+                $doc.stop().animate({scrollTop :offsetTop}, 800);
+            });
+
+            $(window).scroll(function(){
+                var scltop = $(window).scrollTop();
+                $.each($contents, function(idx, item){
+                    var $target = $contents.eq(idx),
+                        i = idx,
+                        targetTop = $target.offset().top;
+
+                    if (targetTop <= scltop) {
+                        $menu.removeClass('on');
+                        $menu.eq(i).addClass('on');
+                    }
+                    if (!(744 <= scltop)) $menu.removeClass('on');
+                });
+
+                if (scltop >= 744) {
+                    $('.quick-menu').addClass('fix');
+                }
+                else{ $('.quick-menu').removeClass('fix');}
+            });
+            btnTop.on('click', function(e){
+                e.preventDefault();
+                $('html, body').stop().animate({scrollTop : 0},800);
+            });
+        };
+
+        return {
+            init: function(){
+                quick();
+            }
+        }
+    })();
+
+</script>
+</html>
