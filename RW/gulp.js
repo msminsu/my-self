@@ -81,6 +81,7 @@ gulp.task('start', () =>{
             .pipe(header(banner()))
             .pipe(sourcemaps.write(`.`))
             .pipe(gulp.dest(Path.local_css));
+
     };
 
     gulp.watch([`${Path.local_src_js}/**/*.js`], jsCompile);
