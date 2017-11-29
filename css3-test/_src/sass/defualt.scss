@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+$static:'../';
+$folder:'';
+
+$minWidth: 320px;
+$fontFamily:'나눔고딕', NanumGothic, Helvetica, AppleGothic, Sans-serif, ngwoff, ngeot, '굴림', gulrem;
+$indentValue:-999em;
+$bodyColor:#fff;
+$baseFontSize:14px;
+$fontColor:#333;
+$linkColor:#555;
+$hoverColor:#555;
+
+
+@import "util/mixin";
+
+/* defualt setting */
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select, strong { margin: 0; padding: 0; letter-spacing: -1px; }
+
+body { background: $bodyColor; color: $fontColor; margin: 0; padding: 0; font-family: $fontFamily; font-size: $baseFontSize; line-height: 1; }
+
+button { outline: 0; background: none; border: 0; cursor: pointer; }
+
+img { border: 0; vertical-align: top }
+
+ul, ol { list-style: none; }
+
+em{ font-style: normal;}
+
+table { border-spacing: 0; }
+
+caption { height: 0; overflow: hidden; font-size: 0; }
+
+a { color: $linkColor; text-decoration: none }
+
+a:hover { color: $linkColor;  }
+
+.box{ width: 1276px; height: 369px;@include bg($bg:'bg.jpg');
+
+}
+.log{ width: 1276px; height: 369px;@include bg($bg:'logo.png');
+  mix-blend-mode: screen;
+}

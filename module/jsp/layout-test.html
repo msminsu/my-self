@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/layout-test.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+</head>
+<body>
+
+<div class="resultBox tab">
+    <div class="tit">
+        <ul>
+            <li><a href="#tab1">단행본(41)</a></li>
+            <li  class="active"><a href="#tab2">연속간행물(6)</a></li>
+            <li><a href="#tab3">비도서(16)</a></li>
+            <li><a href="#tab4">전자책(22)</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function(){
+
+       // pageMain.init();
+
+        $('.depth1 >li >a ').on('click', function() {
+            $(this).parent('li').toggleClass('active');
+        });
+
+        $('.tit ul>li >a ').on('click', function() {
+            $(this).parent('li').toggleClass('active');
+        });
+
+    });
+
+
+</script>
+</body>
+</html>

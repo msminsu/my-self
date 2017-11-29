@@ -1,0 +1,107 @@
+@charset "UTF-8";
+
+@import "util/variable";
+@import "util/normalize";
+@import "util/mixin";
+/**
+ * import
+ */
+
+ul,li,ol{list-style: none; margin: 0; padding: 0;}
+a{text-decoration: none}
+
+
+.rightCon{width: 210px;
+  strong{ display: block; padding:14px 16px;border:1px solid #4d4d4d; font-size: 16px;color:#000; font-weight: bold;}
+}
+
+
+//인기검색어
+.rankBox{
+  .rank{ border:1px solid #ddd; border-top:none;}
+  .tit > ul{ overflow: hidden;width: 100%; border-bottom:1px solid #ddd;
+      li{float:left; width: 33.3%; background: #f5f5f5;
+        a{ display: block; height: 43px; line-height: 43px; border-left:1px solid #ddd;color:#000; text-align: center;}
+        &.active{ background: #4f5b82;
+          a{color:#fff}
+        }
+      }
+    }
+  .cont{padding: 13px 0 17px 19px; height: 240px;
+    ol>li{ margin-bottom: 3px;
+      a{color:#555;
+        &:hover{text-decoration: underline}
+        span{ padding-right: 15px;color:#f24d4b; font-size: 13px;}
+      }
+    }
+  }
+  
+}
+
+/*태그클라우드*/
+.tagBox{
+  
+  div{padding:8px 16px;border:1px solid #ddd; border-top:none;
+    a{ text-decoration: none; font-size: 14px; color:#788ac4; line-height: 1.2;
+      &:hover{text-decoration: underline}
+      &.type1{ font-size: 17px;}
+      &.type2{ font-size: 17px; font-weight: bold;}
+    }
+  }
+}
+
+//페이지
+.page{ display: block; text-align: center;
+  a{padding:0 10px; color:#4d4d4d}
+}
+
+//제한검색
+
+.limitSrch{
+  button{ display: none;}
+  .depth1{
+    border: 1px solid #ddd;
+    border-top: none;
+    border-bottom: none;
+    >li{
+      >a{display: block;padding: 9px 20px; color: #555555; font-size: 14px; /*@include bg($bg: 'lnb-plus.png',$color:#606060,$position:250px 50%);*/
+        border-bottom:1px solid #ddd;
+      }
+      &.active{
+        ul{ display: block;}
+        //> a{ /*@include bg($bg: 'lnb-minus.png',$position:250px 50%);*/ }
+      }
+      ul{ display: none;}
+    }
+  }
+  .depth2{ padding: 10px 0; border-bottom:1px solid #ddd; background: #f6f6f6;
+    >li{
+      >a{display: block;  font-size: 12px; line-height: 20px; padding-left: 20px;
+        color: #555555;
+        &:hover{color:#1a63c6;}
+      }
+    }
+    
+  }
+  
+}
+
+.resultInfo{ padding-left: 15px;color:#666;/*@include bg($bg: 'lnb-minus.png',$position:250px 50%);*/
+  strong{ font-size: 17px; color:#f24d4b}
+  span{color:#f24d4b;em{ font-weight: bold; font-style: normal;}}
+}
+
+
+.resultBox{ padding:30px;
+  .tit{
+    ul{ overflow: hidden;
+      li{ float: left;width: 50%;
+        a{ display: block; font-size: 15px;line-height: 60px; color:#000; text-align: center; border:1px solid #ddd; border-left:none;}
+        &:first-child a{ border-left:1px solid #ddd;}
+        &.active{ background: #f24d4b;
+          a{color:#fff}
+        }
+      }
+    }
+  }
+}

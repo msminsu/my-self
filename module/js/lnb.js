@@ -29,24 +29,6 @@ var pageMain = (function(){
 
         });
 
-        $(document).on('click','.depth2>li>a',function(e){
-            e.preventDefault();
-            if($(this).closest('li').hasClass('open')){
-                $(this).closest('li').removeClass('open');
-
-            }else{
-
-                if($(this).next('ul').hasClass('depth3')){
-                    console.log();
-                    $(this).closest('li').addClass('open');
-                }
-                else {
-                    console.log('no');
-                    return;
-                }
-            }
-
-        });
     };
 
     var checkClass = function(_target){
