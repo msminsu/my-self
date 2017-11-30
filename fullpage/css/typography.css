@@ -1,0 +1,246 @@
+@charset "UTF-8";
+/** @project: typo_web @author: NCSOFT @update : 2017-11-30 11:22:36 */
+/** import */
+html { font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
+
+body { margin: 0; }
+
+/* HTML5 display definitions for IE 9- ========================================================================== */
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary { display: block; }
+
+audio, canvas, progress, video { display: inline-block; }
+
+audio:not([controls]) { display: none; height: 0; }
+
+progress { vertical-align: baseline; }
+
+template, [hidden] { display: none; }
+
+/* Links ========================================================================== */
+a { background-color: transparent; }
+
+a:active, a:hover { outline-width: 0; }
+
+/* Text-level semantics ========================================================================== */
+abbr[title] { border-bottom: none; text-decoration: underline; text-decoration: underline dotted; }
+
+b, strong { font-weight: inherit; }
+
+b, strong { font-weight: bolder; }
+
+dfn { font-style: italic; }
+
+h1 { font-size: 2em; margin: 0.67em 0; }
+
+mark { background-color: #ff0; color: #000; }
+
+small { font-size: 80%; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+
+sub { bottom: -0.25em; }
+
+sup { top: -0.5em; }
+
+/* Embedded content ========================================================================== */
+img { border-style: none; }
+
+svg:not(:root) { overflow: hidden; }
+
+/* Grouping content ========================================================================== */
+code, kbd, pre, samp { font-family: monospace, monospace; font-size: 1em; }
+
+figure { margin: 1em 40px; }
+
+hr { box-sizing: content-box; height: 0; overflow: visible; }
+
+/* Forms ========================================================================== */
+button, input, select, textarea { font: inherit; }
+
+optgroup { font-weight: bold; }
+
+button, input, select { overflow: visible; }
+
+button, input, select, textarea { margin: 0; }
+
+button, select { text-transform: none; }
+
+button, [type="button"], [type="reset"], [type="submit"] { cursor: pointer; }
+
+[disabled] { cursor: default; }
+
+button, html [type="button"], [type="reset"], [type="submit"] { -webkit-appearance: button; }
+
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+button:-moz-focusring, input:-moz-focusring { outline: 1px dotted ButtonText; }
+
+fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
+
+legend { box-sizing: border-box; color: inherit; display: table; max-width: 100%; padding: 0; white-space: normal; }
+
+textarea { overflow: auto; }
+
+[type="checkbox"], [type="radio"] { box-sizing: border-box; padding: 0; }
+
+[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button { height: auto; }
+
+[type="search"] { -webkit-appearance: textfield; }
+
+[type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+.hide { position: relative; font: 0/0 a; text-shadow: none; color: transparent; }
+
+* { margin: 0; padding: 0; }
+
+html, body { min-width: 1100px; }
+
+body { background: #fff; color: #000; margin: 0; padding: 0; font-family: "Malgun Gothic", "맑은고딕", Dotum, "돋움", Hevetica, AppleGothic, sans-serif; font-size: 12px; line-height: 1; }
+
+button { outline: 0; background: none; border: 0; cursor: pointer; }
+
+img { border: 0; }
+
+ul, ol { list-style: none; }
+
+table { border-spacing: 0; }
+
+caption { height: 0; overflow: hidden; font-size: 0; }
+
+a { color: #000; }
+
+a:hover { color: #000; }
+
+.gnbContainer { width: 1100px; }
+
+.boxWrap { text-align: center; }
+
+.logo { display: block; width: 411px; height: 161px; margin: 0 auto; text-indent: -999em; }
+
+#fp-nav ul li .fp-tooltip.right { top: 15px; right: 50px; line-height: 1.2; }
+
+#fp-nav ul li, .fp-slidesNav ul li { width: 46px; height: 46px; }
+
+#fp-nav ul li:nth-child(1), .fp-slidesNav ul li:nth-child(1) { display: none; }
+
+#fp-nav ul li a, .fp-slidesNav ul li a { display: block; width: 46px; height: 46px; }
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span { display: none; }
+
+#fp-nav ul li:nth-child(2) a, .fp-slidesNav ul li:nth-child(2) a { background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/nav1.png") no-repeat 50% 0; }
+
+#fp-nav ul li:nth-child(2) a.active, #fp-nav ul li:nth-child(2) a:hover, .fp-slidesNav ul li:nth-child(2) a.active, .fp-slidesNav ul li:nth-child(2) a:hover { background-position: 0 100%; }
+
+#fp-nav ul li:nth-child(3) a, .fp-slidesNav ul li:nth-child(3) a { background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/nav2.png") no-repeat 50% 0; }
+
+#fp-nav ul li:nth-child(3) a.active, #fp-nav ul li:nth-child(3) a:hover, .fp-slidesNav ul li:nth-child(3) a.active, .fp-slidesNav ul li:nth-child(3) a:hover { background-position: 0 100%; }
+
+#fp-nav ul li:nth-child(4) a, .fp-slidesNav ul li:nth-child(4) a { background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/nav3.png") no-repeat 50% 0; }
+
+#fp-nav ul li:nth-child(4) a.active, #fp-nav ul li:nth-child(4) a:hover, .fp-slidesNav ul li:nth-child(4) a.active, .fp-slidesNav ul li:nth-child(4) a:hover { background-position: 0 100%; }
+
+#fp-nav ul li:nth-child(5) a, .fp-slidesNav ul li:nth-child(5) a { background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/nav4.png") no-repeat 50% 0; }
+
+#fp-nav ul li:nth-child(5) a.active, #fp-nav ul li:nth-child(5) a:hover, .fp-slidesNav ul li:nth-child(5) a.active, .fp-slidesNav ul li:nth-child(5) a:hover { background-position: 0 100%; }
+
+.sliderBox { position: relative; width: 833px; margin: 0 auto; }
+
+.sliderBox button { display: block; width: 36px; height: 69px; position: absolute; top: 50%; margin-top: -34px; text-indent: -999em; }
+
+.sliderBox button.btn-prev { background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/prev.png") no-repeat 50% 0; left: -85px; }
+
+.sliderBox button.btn-next { background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/next.png") no-repeat 50% 0; right: -85px; }
+
+.sliderBox .pages { overflow: hidden; display: inline-block; margin-top: 2%; }
+
+.sliderBox .pages li { float: left; margin-left: 20px; }
+
+.sliderBox .pages li a { display: block; position: relative; width: 16px; height: 16px; border-radius: 16px; background: #fff; opacity: .6; text-indent: -999em; }
+
+.sliderBox .pages li:first-child { margin-left: 0; }
+
+.sliderBox .pages li.active a, .sliderBox .pages li a:hover { opacity: 1; }
+
+.sliderBox .listWrap { position: relative; overflow: hidden; }
+
+.sliderBox .listWrap ul { margin-left: -11px; margin-top: -11px; }
+
+.sliderBox .listWrap ul li { float: left; width: 270px; margin-top: 11px; margin-left: 11px; }
+
+.sliderBox .listWrap ul li > a { position: relative; display: block; }
+
+.sliderBox .listWrap ul li > a:after { position: absolute; display: block; content: 'Large View'; top: 0; left: 0; width: 100%; height: 100%; color: #fff; background: rgba(0, 0, 0, 0.8); line-height: 179px; opacity: 0; transition: opacity ease .5s; }
+
+.sliderBox .listWrap ul li > a:hover:after { opacity: 1; transition: opacity ease .5s; }
+
+.sliderBox .listWrap ul li > a img { width: 270px; height: 179px; vertical-align: top; }
+
+.sliderBox .listWrap ul li span { display: block; position: relative; height: 49px; line-height: 49px; background: #000; color: #fff; font-size: 24px; text-align: center; }
+
+.sliderBox .listWrap ul li span a { display: inline-block; position: absolute; right: 20px; font-size: 12px; color: #4f4d4d; text-decoration: none; }
+
+.sliderBox .listWrap ul li span a:hover { color: #ccc; }
+
+#fullpage .category { overflow: hidden; display: inline-block; margin: 1.5% auto; }
+
+#fullpage .category li { float: left; }
+
+#fullpage .category li a { position: relative; display: block; padding: 0 34px 0 36px; text-indent: -999em; }
+
+#fullpage .category li a:after { display: block; position: absolute; content: ''; left: 0; top: 3px; width: 1px; height: 18px; background: #fff; opacity: 0.3; }
+
+#fullpage .category li:nth-child(1) a:after { display: none; }
+
+#fullpage .category li.active a, #fullpage .category li a:hover { background-position: 50% 100%; }
+
+.page1 .logo { background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/title1.png") no-repeat 50% 0; }
+
+.page1 .category { margin-top: 70px !important; }
+
+.page1 .category li:nth-child(1) a { width: 100px; height: 25px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/menu1.png") no-repeat 50% 0; }
+
+.page1 .category li:nth-child(2) a { width: 101px; height: 25px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/menu2.png") no-repeat 50% 0; }
+
+.page1 .category li:nth-child(3) a { width: 150px; height: 25px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/menu3.png") no-repeat 50% 0; }
+
+.page1 .category li:nth-child(4) a { width: 98px; height: 25px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/menu4.png") no-repeat 50% 0; }
+
+.page2 .logo { background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/title2.png") no-repeat 50% 0; }
+
+.page2 .category li:nth-child(1) a { width: 34px; height: 18px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/all.png") no-repeat 50% 0; }
+
+.page2 .category li:nth-child(2) a { width: 139px; height: 23px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/cate2-1.png") no-repeat 50% 0; }
+
+.page2 .category li:nth-child(3) a { width: 124px; height: 23px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/cate2-2.png") no-repeat 50% 0; }
+
+.page2 .category li:nth-child(4) a { width: 142px; height: 23px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/cate2-3.png") no-repeat 50% 0; }
+
+.page2 .category li:nth-child(5) a { width: 175px; height: 23px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/cate2-4.png") no-repeat 50% 0; }
+
+.page3 .logo { background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/title3.png") no-repeat 50% 0; }
+
+.page3 .category li:nth-child(1) a { width: 34px; height: 18px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/all.png") no-repeat 50% 0; }
+
+.page3 .category li:nth-child(2) a { width: 173px; height: 23px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/cate3-1.png") no-repeat 50% 0; }
+
+.page4 .logo { background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/title4.png") no-repeat 50% 0; }
+
+.page4 .category li:nth-child(1) a { width: 34px; height: 18px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/all.png") no-repeat 50% 0; }
+
+.page4 .category li:nth-child(2) a { width: 128px; height: 23px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/cate4-1.png") no-repeat 50% 0; }
+
+.page4 .category li:nth-child(3) a { width: 119px; height: 23px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/cate4-2.png") no-repeat 50% 0; }
+
+.page4 .category li:nth-child(4) a { width: 301px; height: 23px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/cate4-3.png") no-repeat 50% 0; }
+
+.page5 .logo { background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/title5.png") no-repeat 50% 0; }
+
+.page5 .category li:nth-child(1) a { width: 34px; height: 18px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/all.png") no-repeat 50% 0; }
+
+.page5 .category li:nth-child(2) a { width: 205px; height: 23px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/cate5-1.png") no-repeat 50% 0; }
+
+.page5 .category li:nth-child(3) a { width: 127px; height: 23px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/cate5-2.png") no-repeat 50% 0; }
+
+.page5 .copy { background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/copy.png") no-repeat 50% 0; width: 531px; height: 18px; margin: 40px auto 0; text-indent: -999em; }
+
+/*# sourceMappingURL=typography.css.map */

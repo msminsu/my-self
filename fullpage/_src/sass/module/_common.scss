@@ -1,0 +1,21 @@
+/**
+ * button position
+ */
+[class*="btn-link-"],
+[class*="btn-layer-"]{
+	position:absolute;
+	display:block;
+	overflow:hidden;
+	text-indent:$indentValue;
+	left:50%;
+	z-index:10;
+}
+
+@each $selector, $value in $button{
+	#{$selector}{
+		@each $key, $size in $value{
+			#{$key}:$size + px;
+		}
+	}
+}
+

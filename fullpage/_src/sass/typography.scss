@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+/**
+ * import
+ */
+
+@import "../../../common/sass/base/normalize.4.0.0";
+@import "util/variable";
+@import "util/mixin";
+@import "util/reset";
+
+
+//a{ background: red; opacity:.5;}
+
+
+.boxWrap{ text-align: center;}
+.logo{ display: block; width: 411px; height: 161px; margin: 0 auto; text-indent:-999em;}
+
+
+//우측 네비
+#fp-nav ul li .fp-tooltip.right{ top: 15px;right: 50px; line-height: 1.2;}
+#fp-nav ul li, .fp-slidesNav ul li{ width: 46px; height: 46px;
+    &:nth-child(1){ display: none}
+    a{ display: block; width: 46px; height: 46px;
+        span{ display: none;}
+    }
+    &:nth-child(2) a{@include bg($bg:'nav1.png');
+        &.active,&:hover{background-position:0 100%}
+    }
+    &:nth-child(3) a{@include bg($bg:'nav2.png');
+        &.active,&:hover{background-position:0 100%}
+    }
+    &:nth-child(4) a{@include bg($bg:'nav3.png');
+        &.active,&:hover{background-position:0 100%}
+    }
+    &:nth-child(5) a{@include bg($bg:'nav4.png');
+        &.active,&:hover{background-position:0 100%}
+    }
+}
+
+//이미지 리스트
+.sliderBox{ position: relative; width: 833px; margin:0 auto;
+    button{ display: block; width: 36px; height: 69px; position: absolute; top:50%; margin-top:-34px;text-indent: -999em;
+        &.btn-prev{@include bg($bg:'prev.png'); left: -85px;}
+        &.btn-next{@include bg($bg:'next.png'); right: -85px;}
+    }
+    .pages{ overflow: hidden; display: inline-block; margin-top: 2%;
+        li{float:left; margin-left: 20px;
+            a{ display: block;position: relative;width: 16px; height: 16px;border-radius: 16px; background: #fff; opacity:.6;text-indent: -999em}
+            &:first-child{ margin-left: 0;}
+            &.active a,a:hover{opacity:1}
+        }
+    }
+    
+    .listWrap{
+        position: relative;overflow: hidden;
+        ul{  margin-left: -11px; margin-top: -11px;
+            li{float:left; width: 270px;margin-top: 11px; margin-left: 11px;
+                > a{ position: relative;display: block;
+                    &:after{ position: absolute; display: block;content:'Large View'; top: 0; left: 0; width: 100%; height: 100%; color:#fff; background: rgba(0,0,0,.8); line-height: 179px; opacity:0; transition: opacity ease .5s;  }
+                    &:hover:after{opacity:1;  transition: opacity ease .5s;  }
+                    img{ width: 270px; height: 179px;vertical-align: top}
+                }
+                span{ display: block; position: relative; height: 49px;line-height: 49px; background: #000;color:#fff; font-size: 24px; text-align: center;
+                    a{ display: inline-block; position: absolute; right: 20px; font-size: 12px; color:#4f4d4d; text-decoration: none;
+                        &:hover{color:#ccc;}
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// 필터 리스트
+#fullpage{
+    .category{ overflow: hidden; display: inline-block;margin:1.5% auto;
+        li{float:left;
+            a{ position: relative;display: block; padding: 0 34px 0 36px; text-indent: -999em;
+                &:after{ display: block; position: absolute; content:''; left:0; top:3px; width: 1px; height: 18px; background: #fff; opacity:0.3;}
+            }
+            &:nth-child(1) a:after{ display: none;}
+            &.active a,& a:hover{background-position:50% 100%}
+        }
+    }
+}
+
+
+
+.page1{
+    .logo{ @include bg($bg:'title1.png');}
+    .category{ margin-top: 70px !important;
+        li{
+            &:nth-child(1) a{ width: 100px; height: 25px;@include bg($bg:'menu1.png');}
+            &:nth-child(2) a{ width: 101px; height: 25px;@include bg($bg:'menu2.png');}
+            &:nth-child(3) a{ width: 150px; height: 25px;@include bg($bg:'menu3.png');}
+            &:nth-child(4) a{ width: 98px; height: 25px;@include bg($bg:'menu4.png');}
+        }
+    }
+}
+.page2{
+    .logo{ @include bg($bg:'title2.png');}
+    .category li{
+        &:nth-child(1) a{ width: 34px; height: 18px;@include bg($bg:'all.png');}
+        &:nth-child(2) a{ width: 139px; height: 23px;@include bg($bg:'cate2-1.png');}
+        &:nth-child(3) a{ width: 124px; height: 23px;@include bg($bg:'cate2-2.png');}
+        &:nth-child(4) a{ width: 142px; height: 23px;@include bg($bg:'cate2-3.png');}
+        &:nth-child(5) a{ width: 175px; height: 23px;@include bg($bg:'cate2-4.png');}
+    }
+}
+.page3{
+    .logo{ @include bg($bg:'title3.png');}
+    .category li{
+        &:nth-child(1) a{ width: 34px; height: 18px;@include bg($bg:'all.png');}
+        &:nth-child(2) a{ width: 173px; height: 23px;@include bg($bg:'cate3-1.png');}
+    }
+}
+.page4{
+    .logo{ @include bg($bg:'title4.png');}
+    .category li{
+        &:nth-child(1) a{ width: 34px; height: 18px;@include bg($bg:'all.png');}
+        &:nth-child(2) a{ width: 128px; height: 23px;@include bg($bg:'cate4-1.png');}
+        &:nth-child(3) a{ width: 119px; height: 23px;@include bg($bg:'cate4-2.png');}
+        &:nth-child(4) a{ width: 301px; height: 23px;@include bg($bg:'cate4-3.png');}
+    }
+}
+.page5{
+    .logo{ @include bg($bg:'title5.png');}
+    .category li{
+        &:nth-child(1) a{ width: 34px; height: 18px;@include bg($bg:'all.png');}
+        &:nth-child(2) a{ width: 205px; height: 23px;@include bg($bg:'cate5-1.png');}
+        &:nth-child(3) a{ width: 127px; height: 23px;@include bg($bg:'cate5-2.png');}
+    }
+    .copy{@include bg($bg:'copy.png'); width: 531px; height: 18px; margin: 40px auto 0;text-indent: -999em}
+}
