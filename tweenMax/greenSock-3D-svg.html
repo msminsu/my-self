@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>3D</title>
+    <style>
+        body{background: #67c28d; width: 100%;height:100%}
+        ul{ float: left;position: relative; width: 200px; height: 500px;}
+        li{ list-style:none;}
+
+        /*===================================================================================
+              로더
+        =====================================================================================*/
+        .buttons {
+            position: fixed;
+            top: 20px;
+            right: 20px; }
+        .buttons button {
+            width: 140px;
+            display: block;
+            margin-bottom: 5px; }
+
+        #loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            opacity: 0; }
+        #loader .dot {
+            width: 12px;
+            height: 12px;
+            display: inline-block;
+            border-radius: 100%;
+            margin-right: 6px;
+            border: 2px #2b4d66 solid; }
+
+        #boxHTML {
+            width: 200px;
+            height: 200px;
+            background-color: rgba(43, 77, 102, 0.8);
+            position: relative; }
+        #boxHTML p {
+            margin: 0;
+            font-size: 40px;
+            position: absolute;
+            bottom: 30px;
+            width: 100%;
+            text-align: center;
+            color: #fff; }
+
+        #htmlDOT {
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            background-color: #B1DEC7; }
+
+        #boxHTML, #boxSVG {
+            position: absolute;
+            top: 0;
+            left: 0; }
+
+        .perspective {
+            position: absolute;
+            -webkit-perspective: 600px; /*3D*/
+            perspective: 600px;
+            height: 100%;
+            width: 100%; }
+
+        .circStroke {
+            opacity: 0; }
+
+        .centerH {
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            z-index: -1; }
+
+        .centerW {
+            height: 100%;
+            width: 2px;
+            background-color: #fff;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+            z-index: -1; }
+
+        .thanks {
+            font-size: 100px;
+            margin: 0;
+            color: #fff;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            text-transform: uppercase;
+            font-weight: bold;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            visibility: hidden; }
+    </style>
+    <script>window.jQuery || document.write('<script src="https://code.jquery.com/jquery-2.0.3.js"><\/script>')</script>
+</head>
+<body>
+
+<div class="perspective">
+    <div id="boxHTML" class="box">
+        <p>DIV</p>
+        <span id="htmlDOT"></span>
+    </div>
+
+    <!-- SVG Box -->
+    <svg id="boxSVG" class="box" version="1.1"
+         baseProfile="full"
+         width="200" height="200"
+         xmlns="http://www.w3.org/2000/svg">
+
+        <rect width="100%" height="100%" fill="#2b4d66" />
+        <circle class="circ" cx="100" cy="100" r="20" fill="#b1dec7" />
+        <text x="100" y="170" font-size="40" text-anchor="middle" fill="white">SVG</text>
+        <circle class="circStroke" cx="100" cy="100" r="95" fill="#2b4d66" />
+
+    </svg>
+</div>
+
+<div class="line centerH"></div>
+<div class="line centerW"></div>
+
+<div class="buttons">
+    <button id="btnNext">next</button>
+    <button id="btnPrev">prev</button>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+<script>
+    (function($){
+        var box= $('.box'),
+            boxSVG= $('#boxSVG'),
+            boxHTML= $('#boxHTML'),
+            htmlDot= $('#htmlDOT'),
+            svgDot= $('#boxSVG .circ'),
+            tl = new TimelineMax({paused: true});
+
+
+        //Timeline
+        tl
+            .to(boxHTML,0.7,{x:'100%',y:'100%',  ease:Power2.easeInOut})// 앞프레임에 연관된 시간
+            .to(boxSVG,0.7,{x:'100%' ,y:'100%',  ease:Power2.easeInOut})
+            .addPause()
+            .to(boxHTML,0.7,{left:'50%',top:'50%',  ease:Power2.easeInOut})
+            .to(boxSVG,0.7,{left:'50%' ,top:'50%',  ease:Power2.easeInOut})
+            .addPause()
+            .to(boxHTML,0.7,{left:'50%',top:'50%',x:'-50%',y:'-50%',  ease:Power2.easeInOut})
+            .to(htmlDot,0.7,{left:0 ,top:0,  ease:Power2.easeInOut})
+            .addPause()
+            .to(boxSVG,0.7,{left:'50%',top:'50%',x:'-50%',y:'-50%',  ease:Power2.easeInOut})
+            .to(svgDot,0.7,{attr:{cx:0,cy:0},  ease:Power2.easeInOut})
+            .addPause()
+            .to(boxHTML,0.7,{rotation:90,transformOrigin:'100% 100%',  ease:Power2.easeInOut})
+            .addPause()
+            .to(boxSVG,0.7,{rotation:90,transformOrigin:'100% 100%',  ease:Power2.easeInOut})
+            .addPause()
+            .to(boxHTML,0.7,{xPercent:-100, rotation:0,  ease:Power2.easeInOut})
+            .addPause()
+            .to(boxSVG,0.7,{x:'0%', rotation:0,  ease:Power2.easeInOut})
+            .addPause()
+            .to(htmlDot,0.7,{left:'50%' ,top:'50%',  ease:Power2.easeInOut})
+            .to(svgDot,0.7,{ attr:{cx:100 ,cy:100},  ease:Power2.easeInOut},'-=0.7')
+            .addPause()
+            .to([boxSVG,boxHTML],0.7,{ rotation:720,transformOrigin:'50% 50%',  ease:Power2.easeInOut})
+            .addPause()
+            .to(boxHTML,0.7,{rotationX:-180,transformOrigin:'0% 50%',  ease:Power2.easeInOut})
+            .to(boxSVG,0.7,{rotationY:-180 ,transformOrigin:'100% 50%',  ease:Power2.easeInOut})
+            .addPause()
+            .to(boxHTML,0.7,{rotationX:-360,  ease:Power2.easeInOut})
+            .to(boxSVG,0.7,{rotationY:-360 ,  ease:Power2.easeInOut})
+            .addPause()
+        ;
+
+
+
+        $('#btnNext').on('click',function(){
+            tl.play();
+        });
+        $('#btnPrev').on('click',function(){
+            tl.reverse();
+        });
+
+    })(jQuery);
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

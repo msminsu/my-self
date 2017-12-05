@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>타임라인</title>
+    <style>
+        body{background: #67c28d;}
+        ul{ float: left;position: relative; width: 200px; height: 500px;}
+        li{ list-style:none;}
+        [class*='box']{
+            top:300px;
+            position:absolute;
+            width: 150px;height: 50px;
+            line-height: 50px;
+            background: #fff;
+            border-radius:100px;
+            color:#000;
+            font-weight: bold;
+            text-align: center;
+            font-size: 14px;
+        }
+        .box1 { top: 60px; left: 100px; }
+
+        .box2 { top: 120px; left: 100px; }
+
+        .box3 { top: 180px; left: 100px; }
+
+        .box4 { top: 240px; left: 100px; }
+
+        .box5 { top: 300px; left: 100px; }
+
+        /*===================================================================================
+              로더
+        =====================================================================================*/
+
+        #loader{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform:translate(-50%, -50%);
+        }
+        .dot{ position: relative;width: 12px; height: 12px; display: inline-block; border-radius: 100%; margin-right: 6px; border:2px #2b4d66 solid;}
+
+
+        
+    </style>
+    <script>window.jQuery || document.write('<script src="https://code.jquery.com/jquery-2.0.3.js"><\/script>')</script>
+</head>
+<body>
+
+<div id="loader">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+</div>
+<ul class="wrap1">
+    <li class="box1">animation_01</li>
+    <li class="box2">animation_02</li>
+    <li class="box3">animation_03</li>
+    <li class="box4">animation_04</li>
+    <li class="box5">animation_05</li>
+</ul>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+<script>
+    (function($){
+        var b1= $('.wrap1 .box1'),
+            b2= $('.wrap1 .box2'),
+            b3= $('.wrap1 .box3'),
+            b4= $('.wrap1 .box4'),
+            b5= $('.wrap1 .box5'),
+            tl = new TimelineMax({paused: true}),
+            dot=$('.dot'),
+            loader=$('#loader'),
+            tlLoader = new TimelineMax({repeat:2, onComplete:loadContent}); // -1 무한 반복
+         // 시작정 전지
+
+        //Timeline
+        tl
+            .from(b1,0.3,{y:-15, autoAlpha:0, ease:Power1.easeOut})// 앞프레임에 연관된 시간
+            .from(b2,0.3,{y:-15, autoAlpha:0, ease:Power1.easeOut},'+=1')
+            .from(b3,0.3,{y:-15, autoAlpha:0, ease:Power1.easeOut},'-=0.15')
+            .from(b4,0.3,{y:-15, autoAlpha:0, ease:Power1.easeOut},'-=0.15')
+            .from(b5,0.3,{y:-15, autoAlpha:0, ease:Power1.easeOut},'-=0.15');
+
+        // Loader TimeLine
+        tlLoader.staggerFromTo(dot, 0.3,
+            {y:0,autoAlpha:0},
+            {y:20,autoAlpha:1,ease:Back.easeInOut},
+            0.05
+        )
+        .fromTo(loader,0.3,
+            {autoAlpha:1, scale:1.3},
+        {autoAlpha:0, scale:1, ease:Power0.easeNone},
+            0.9
+            );
+
+        function loadContent(){
+            console.log('bring on the content')
+        }
+    })(jQuery);
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

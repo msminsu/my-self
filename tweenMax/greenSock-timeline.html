@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>타임라인</title>
+    <style>
+        body{background: #000;}
+        ul{ float: left;position: relative; width: 200px; height: 500px;}
+        [class*='box']{
+            top:300px;
+            position:absolute;
+            width: 150px;height: 50px;
+            line-height: 50px;
+            background: #fff;
+            border-radius:100px;
+            color:#000;
+            font-weight: bold;
+            text-align: center;
+            font-size: 14px;
+        }
+        .box1 { top: 60px; left: 100px; }
+
+        .box2 { top: 120px; left: 100px; }
+
+        .box3 { top: 180px; left: 100px; }
+
+        .box4 { top: 240px; left: 100px; }
+
+        .box5 { top: 300px; left: 100px; }
+
+    </style>
+    <script>window.jQuery || document.write('<script src="https://code.jquery.com/jquery-2.0.3.js"><\/script>')</script>
+</head>
+<body>
+<ul class="wrap1">
+    <li class="box1">animation_01</li>
+    <li class="box2">animation_02</li>
+    <li class="box3">animation_03</li>
+    <li class="box4">animation_04</li>
+    <li class="box5">animation_05</li>
+</ul>
+<ul class="wrap2">
+    <li class="box1">animation_01</li>
+    <li class="box2">animation_02</li>
+    <li class="box3">animation_03</li>
+    <li class="box4">animation_04</li>
+    <li class="box5">animation_05</li>
+</ul>
+<ul class="wrap3">
+    <li class="box1">animation_01</li>
+    <li class="box2">animation_02</li>
+    <li class="box3">animation_03</li>
+    <li class="box4">animation_04</li>
+    <li class="box5">animation_05</li>
+</ul>
+<ul class="wrap4">
+    <li class="box1">animation_01</li>
+    <li class="box2">animation_02</li>
+    <li class="box3">animation_03</li>
+    <li class="box4">animation_04</li>
+    <li class="box5">animation_05</li>
+</ul>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.7/TweenMax.min.js"></script>
+<script>
+    (function($){
+        var b1= $('.wrap1 .box1'),
+            b2= $('.wrap1 .box2'),
+            b3= $('.wrap1 .box3'),
+            b4= $('.wrap1 .box4'),
+            b5= $('.wrap1 .box5'),
+            w1= $('.wrap2 .box1'),
+            w2= $('.wrap2 .box2'),
+            w3= $('.wrap2 .box3'),
+            w4= $('.wrap2 .box4'),
+            w5= $('.wrap2 .box5'),
+            t1= $('.wrap3 .box1'),
+            t2= $('.wrap3 .box2'),
+            t3= $('.wrap3 .box3'),
+            t4= $('.wrap3 .box4'),
+            t5= $('.wrap3 .box5'),
+            s1= $('.wrap4 .box1'),
+            s2= $('.wrap4 .box2'),
+            s3= $('.wrap4 .box3'),
+            s4= $('.wrap4 .box4'),
+            s5= $('.wrap4 .box5'),
+            tl = new TimelineMax(),
+            tl2 = new TimelineMax(),
+            tl3 = new TimelineMax(),
+            tl4 = new TimelineMax();
+        tl
+            .from(b1,0.3,{y:-15, autoAlpha:0, ease:Power1.easeOut})// 앞프레임에 연관된 시간
+            .from(b2,0.3,{y:-15, autoAlpha:0, ease:Power1.easeOut},'+=1')
+            .from(b3,0.3,{y:-15, autoAlpha:0, ease:Power1.easeOut},'-=0.15')
+            .from(b4,0.3,{y:-15, autoAlpha:0, ease:Power1.easeOut},'-=0.15')
+            .from(b5,0.3,{y:-15, autoAlpha:0, ease:Power1.easeOut},'-=0.15');
+
+
+        tl2
+            .from(w1,0.3,{y:-15, autoAlpha:0, ease:Power1.easeOut})
+            .from(w2,0.3,{y:-15, autoAlpha:0, ease:Power1.easeOut},4)
+            .from(w3,0.3,{y:-15, autoAlpha:0, ease:Power1.easeOut},'-=0.15')
+            .from(w4,0.3,{y:-15, autoAlpha:0, ease:Power1.easeOut},'-=0.15')
+            .from(w5,0.3,{y:-15, autoAlpha:0, ease:Power1.easeOut},'-=0.15');
+
+        tl3
+            .from(t1,0.3,{y:-15, autoAlpha:0, ease:Power1.easeOut})
+            .from(t2,0.3,{y:-15, autoAlpha:0, ease:Power1.easeOut},'+=1')
+            .from(t3,0.3,{y:-15, autoAlpha:0, ease:Power1.easeOut},3)// 각 모션의 시간
+            .from(t4,0.3,{y:-15, autoAlpha:0, ease:Power1.easeOut},2)
+            .from(t5,0.3,{y:-15, autoAlpha:0, ease:Power1.easeOut},2.5);
+
+        tl4
+            .from(s1,0.3,{y:-15, autoAlpha:0, ease:Power1.easeOut})// 1번수 다음에 움직일 모션 키값 추가
+            .add('step1').add('step2')
+            .from(s2,0.3,{y:-15, autoAlpha:0, ease:Power1.easeOut},'step2+=3')
+            .from(s3,0.3,{y:-15, autoAlpha:0, ease:Power1.easeOut},'step2')
+            .from(s4,0.3,{y:-15, autoAlpha:0, ease:Power1.easeOut},)
+            .from(s5,0.3,{y:-15, autoAlpha:0, ease:Power1.easeOut},'step1');
+
+
+    })(jQuery);
+</script>
+</body>
+</html>

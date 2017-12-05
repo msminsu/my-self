@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>타임라인</title>
+    <style>
+        body{background: #000;}
+        ul{ float: left;position: relative; width: 200px; height: 500px;}
+        [class*='box']{
+            top:300px;
+            position:absolute;
+            width: 150px;height: 50px;
+            line-height: 50px;
+            background: #fff;
+            border-radius:100px;
+            color:#000;
+            font-weight: bold;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .box1 { top: 60px; left: 100px; }
+
+        .box2 { top: 120px; left: 100px; }
+
+        .box3 { top: 180px; left: 100px; }
+
+        .box4 { top: 240px; left: 100px; }
+
+        .box5 { top: 300px; left: 100px; }
+
+        /*===================================================================================
+        버튼
+        =====================================================================================*/
+        .buttons{ position: fixed; padding: 20px; right: 20px;}
+        button{ width: 140px; display: block; margin-bottom: 5px;}
+
+    </style>
+    <script>window.jQuery || document.write('<script src="https://code.jquery.com/jquery-2.0.3.js"><\/script>')</script>
+</head>
+<body>
+<ul class="wrap1">
+    <li class="box1">animation_01</li>
+    <li class="box2">animation_02</li>
+    <li class="box3">animation_03</li>
+    <li class="box4">animation_04</li>
+    <li class="box5">animation_05</li>
+</ul>
+
+<div class="buttons">
+    <button id="btnPlay">play</button>
+    <button id="btnPause">pause</button>
+    <button id="btnResume">resume</button>
+    <button id="btnReverse">reverse</button>
+    <button id="btnSpeedUp">speed up</button>
+    <button id="btnSlowDown">slow down</button>
+    <button id="btnSeek">seek 1 sec</button>
+    <button id="btnProgress">go to 50%</button>
+    <button id="btnRestart">restart</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.7/TweenMax.min.js"></script>
+<script>
+    (function($){
+        var b1= $('.wrap1 .box1'),
+            b2= $('.wrap1 .box2'),
+            b3= $('.wrap1 .box3'),
+            b4= $('.wrap1 .box4'),
+            b5= $('.wrap1 .box5'),
+            tl = new TimelineMax();
+
+        tl
+            .from(b1,1,{y:-15, autoAlpha:0, ease:Power1.easeOut})// 앞프레임에 연관된 시간
+            .from(b2,1,{y:-15, autoAlpha:0, ease:Power1.easeOut})
+            .from(b3,1,{y:-15, autoAlpha:0, ease:Power1.easeOut})
+            .from(b4,1,{y:-15, autoAlpha:0, ease:Power1.easeOut})
+            .from(b5,1,{y:-15, autoAlpha:0, ease:Power1.easeOut});
+
+            tl.pause();// 정지
+
+
+        $('#btnPlay').on('click',function () {
+            tl.play();
+        })
+        $('#btnPause').on('click',function () {
+            tl.pause();
+        })
+        $('#btnResume').on('click',function () {
+            tl.resume();
+        })
+        $('#btnReverse').on('click',function () {
+            tl.reverse();
+        })
+        $('#btnSpeedUp').on('click',function () {
+            tl.timeScale(8);
+        })
+        $('#btnSlowDown').on('click',function () {
+            tl.timeScale(0.5);
+        })
+        $('#btnSeek').on('click',function () {
+            tl.seek(1); /// 'step1' 키값, 특정 시간값 1초
+        })
+        $('#btnProgress').on('click',function () {
+            tl.progress(0.5);// 전체 프로그래스 1값중 위치값
+        })
+        $('#btnRestart').on('click',function () {
+            tl.restart();
+        })
+
+
+    })(jQuery);
+</script>
+</body>
+</html>

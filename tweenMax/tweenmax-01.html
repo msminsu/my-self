@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JS Bin</title>
+    <style>
+        body{background: #000}
+        [class*='box']{
+            top:300px;
+            position:absolute;
+            width: 150px;height: 50px;
+            line-height: 50px;
+            background: #fff;
+            border-radius:100px;
+            color:#000;
+            font-weight: bold;
+            text-align: center;
+            font-size: 14px;
+        }
+        .box1{top:50px; left: 100px;}
+        .box2{top:150px; left: 100px;}
+        .box3{top:250px; left: 100px;}
+        .box4{top:400px; left: 100px;}
+        .contral{ position: absolute; top: 350px;}
+    </style>
+</head>
+<body>
+<div class="box1">TweenMax.to</div>
+<div class="box2">TweenMax.from</div>
+<div class="box3">TweenMax.fromTo</div>
+<div class="contral">
+    <button class="btn-start">start</button>
+    <button class="btn-pause">pause</button>
+    <button class="btn-reverse">reverse</button>
+    <button class="btn-restart">restart</button>
+</div>
+<div class="box4">변수할당,제어</div>
+<script src="https://code.jquery.com/jquery-2.0.3.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.7/TweenMax.min.js"></script>
+<script>
+var $b1 = $('.box1');
+var $b2 = $('.box2');
+var $b3 = $('.box3');
+var $b4 = $('.box4');
+
+// 기준이 다름
+TweenMax.to($b1,3,{x:600}); // css ->  to 값으로 애니메이션
+TweenMax.from($b2,3,{x:600});// from ->  css값으로  애니메이션
+TweenMax.fromTo($b3,3,{x:500,backgroundColor:'red'},{x:0,backgroundColor:'green'})// 애니메이션 시작값과 끝값을 설정
+
+
+
+var customTw = TweenMax.to($b4,3,{x:900,ease: Back.easeInOut.config(1.7),onComplete:myFunction});
+function myFunction(){
+    alert('callback func');
+}
+
+$('.btn-start').on('click',function(){
+    customTw.resume();
+});
+$('.btn-pause').on('click',function(){
+    customTw.pause();
+});
+$('.btn-reverse').on('click',function(){
+    customTw.reverse();
+});
+$('.btn-restart').on('click',function(){
+    customTw.restart();
+});
+
+
+
+</script>
+</body>
+</html>

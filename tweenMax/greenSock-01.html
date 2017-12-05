@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>트윈맥스</title>
+    <style>
+        body{background: #000}
+        [class*='box']{
+            top:300px;
+            position:absolute;
+            width: 150px;height: 50px;
+            line-height: 50px;
+            background: #fff;
+            border-radius:100px;
+            color:#000;
+            font-weight: bold;
+            text-align: center;
+            font-size: 14px;
+        }
+        .box1{top:50px; left: 100px;}
+        .box2{top:150px; left: 100px;}
+        .box3{top:250px; left: 100px;}
+        .box4{top:400px; left: 100px;}
+        .contral{ position: absolute; top: 350px;}
+    </style>
+
+    <script>window.jQuery || document.write('<script src="https://code.jquery.com/jquery-2.0.3.js"><\/script>')</script>
+</head>
+<body>
+<div class="box1">TweenMax.to</div>
+<div class="box2">TweenMax</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.7/TweenMax.min.js"></script>
+<script>
+    (function($){
+
+        var obj = $('.box1');
+        var obj2 = $('.box2');
+        TweenMax.set(obj,{opacity:1, y:500}); /// 세팅값
+        TweenMax.to(obj,1,{opacity:0, y:50});
+        TweenMax.to(obj2,1,{autoAlpha:0});
+
+    })(jQuery);
+</script>
+</body>
+</html>
