@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://de.whalesoft.co.kr/common/js/jquery-1.12.4.min.js"></script>
+    <script src="./js/lnb.js"></script>
+    <link rel="stylesheet" href="./css/lnb.css">
+    <style>
+        [data-ui="custom-select"] { position: absolute; z-index: 11; top: 66px; left: 16px; width: 571px; }
+
+        [data-ui="custom-select"] .opener { height: 40px; height: 40px; display: block; position: relative; z-index: 10; cursor: pointer; text-indent: 0; text-align: center; padding: 0 40px 0 10px; line-height: 38px; overflow: hidden; color: #97c9da; font-size: 15px; }
+
+        [data-ui="custom-select"] .opener.active + ul { display: block; }
+
+        [data-ui="custom-select"] ul { position: absolute; display: none; top: 39px; left: 0; border: 1px solid #446b7a; }
+
+        [data-ui="custom-select"] ul li { width: 529px; cursor: pointer; text-indent: 0; padding: 11px 20px; background: #172a31; color: #6597a9; border-top: 1px solid #446b7a; }
+
+        [data-ui="custom-select"] ul li span { color: #f8f4f0; padding: 0 5px; }
+
+        [data-ui="custom-select"] ul li:first-child { border-top: none; }
+
+        [data-ui="custom-select"] ul li:hover { background: #204451; }
+    </style>
+</head>
+<body>
+
+<div data-ui="custom-select">
+    <span class="opener">미션에 참여할 레기온 소속의 캐릭터를 선택해주세요.</span>
+    <ul>
+        <li data-value="1"><span>레인하르트</span>|<span>레기온명은열자입니다</span>|<span>Lv.75 </span>|<span>치유성</span>|<span>내캐릭터명1</span></li>
+        <li data-value="2"><span>레인하르트</span>|<span>레기온명은열자입니다</span>|<span>Lv.73</span>|<span>수호성</span>|<span>내캐릭터명2</span></li>
+        <li data-value="3"><span>레인하르트</span>|<span>레기온명은열자입니다</span>|<span>Lv.70</span>|<span>살성</span>|<span>내캐릭터명3</span></li>
+        <li data-value="4"><span>레인하르트</span>|<span>레기온명은열자입니다</span>|<span>Lv.65</span>|<span>음유성</span>|<span>내캐릭터명4</span></li>
+        <li data-value="5"><span>레인하르트</span>|<span>레기온명은열자입니다</span>|<span>Lv.55</span>|<span>호법성</span>|<span>내캐릭터명은열두자입니다</span></li>
+        <li data-value="6"><span>레인하르트</span>|<span>다른소속레기온명</span>|<span>Lv.46</span>|<span>사격성</span>|<span>내캐릭터명A</span></li>
+        <li data-value="7"><span>아누하르트</span>|<span>마스터서버레기온명</span>|<span>Lv.43</span>|<span>정령성</span>|<span>내캐릭터명B</span></li>
+        <li data-value="8"><span>아누하르트</span>|<span>마스터섭레기온</span>|<span>Lv.42</span>|<span>호법성</span>|<span>내캐릭터명C</span></li>
+        <li data-value="9"><span>아누하르트</span>|<span>마섭레기온입니다</span>|<span>Lv.29</span>|<span>마도성</span>|<span>내캐릭터명D</span></li>
+        <li data-value="0"><span>아누하르트</span>|<span>마섭레기온입니다</span>|<span>Lv.26</span>|<span>궁성</span>|<span>내캐릭터명E</span></li>
+    </ul>
+</div>
+
+<script>
+
+    /**
+     *custom select
+     */
+    (function($){
+        $(document).on('click', '[data-ui="custom-select"] .opener', function(e){
+            var check = $(this).closest('.prevent').hasClass('prevent');
+            if(!check) {
+                $(this).toggleClass('active');
+            }
+
+        });
+
+        $(document).on('click', '[data-ui="custom-select"] li', function(e){
+            $(this).parent().prev().text($(this).text()).removeClass('active');
+           $(this).parent().next().val($(this).attr('data-value'));
+
+        });
+
+        $(document).on('click', function(e){
+            if(!($(e.target).is('[data-ui="custom-select"] .opener') || $(e.target).is('[data-ui="custom-select"] li'))){
+                $('[data-ui="custom-select"] .opener').removeClass('active');
+            }
+        })
+
+    }(window.jQuery));
+</script>
+</body>
+</html>
