@@ -1,0 +1,299 @@
+@charset "UTF-8";
+/** import */
+#Container { background: url(".//module/img/bg-main.jpg") repeat-x 50% 0; padding-top: 91px; }
+
+/*검색창*/
+.searchBox { background: url(".//module/img/bg-dimd.png") repeat 50% 0; position: relative; width: 630px; height: 142px; padding: 25px 39px 32px; margin: 0 auto; box-sizing: border-box; }
+
+.searchBox label { background: url(".//module/img/blt-search.png") no-repeat 0 0; display: block; padding-left: 30px; margin-bottom: 14px; font-size: 20px; color: #fff; }
+
+.searchBox .box { display: table; position: relative; width: 100%; border: 3px solid #ffbb00; background: #fff; box-sizing: border-box; }
+
+.searchBox .box .input-wrap { display: table-cell; width: 100%; }
+
+.searchBox .box .input-wrap input { width: 100%; border: none; font-size: 15px; color: #2b2c2d; padding: 15px 10px 14px 17px; vertical-align: bottom; box-sizing: border-box; }
+
+.searchBox .box .btn-search { display: block; text-indent: -999em; background: url(".//module/img/ico-search.png") no-repeat 50% 50%; display: table-cell; width: 46px; height: 46px; vertical-align: bottom; }
+
+/*퀵메뉴*/
+.quickMenu { overflow: hidden; width: 100%; margin-top: 36px; box-sizing: border-box; border-radius: 10px; box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15); margin-bottom: 47px; }
+
+.quickMenu li { float: left; text-align: center; width: 16.666%; }
+
+.quickMenu li:first-child a:after { display: none; }
+
+.quickMenu li a { display: block; position: relative; background: #fff; height: 245px; padding-top: 14px; }
+
+.quickMenu li a:hover { background: #f4f4f4; }
+
+.quickMenu li a:after { display: block; position: absolute; left: 0; top: 31px; content: ''; width: 1px; height: 216px; background: #ccc; }
+
+.quickMenu li a strong { display: block; color: #021d86; font-size: 22px; padding: 19px 0 20px; }
+
+.quickMenu li a span { color: #313131; font-size: 15px; }
+
+/*공지사항*/
+.notice { position: relative; text-align: center; }
+
+.notice .tabMenu { overflow: hidden; display: inline-block; margin-bottom: 31px; }
+
+.notice .tabMenu li { float: left; width: 223px; }
+
+.notice .tabMenu li.on a { color: #ffffff; background: #004be3; border: 1px solid #004be3; }
+
+.notice .tabMenu li a { display: block; height: 41px; line-height: 41px; font-size: 16px; font-weight: 500; border: 1px solid #d7d7d7; }
+
+.notice .con ul { overflow: hidden; }
+
+.notice .con ul li { float: left; width: 23%; height: 210px; margin-left: 2.6%; text-align: left; line-height: 1.4; }
+
+.notice .con ul li:first-child { margin-left: 0; }
+
+.notice .con ul li a { display: block; border: 1px solid #d7d7d7; }
+
+.notice .con ul li a strong { background: url(".//module/img/ico-speak.png") no-repeat 17px 50%; display: block; padding: 22px 20px 18px 62px; height: 35px; font-weight: 500; color: #262626; background-color: #e9e9e9; }
+
+.notice .con ul li a .txt { display: block; padding: 16px 26px; height: 56px; }
+
+.notice .con ul li a .fbox { overflow: hidden; display: block; padding: 13px 20px 13px 21px; font-size: 13px; border-top: 1px solid #d7d7d7; background: #f6f6f6; }
+
+.notice .con ul li a .fbox span { background: url(".//module/img/ico-watch.png") no-repeat 0px 50%; display: inline-block; padding-left: 20px; color: #444444; }
+
+.notice .con ul li a .fbox em { float: right; font-size: 13px; color: #25649e; }
+
+.notice .btn { position: absolute; top: -3px; right: 0; display: block; text-indent: -999em; display: none; width: 34px; height: 45px; }
+
+.notice .btn.more { background: url(".//module/img/btn-more.gif") no-repeat 50% 0; }
+
+.bx-wrapper { border: none; box-shadow: none; max-width: 100% !important; }
+
+/*팝업존*/
+.popupZone { width: 100%; margin-top: 45px; overflow: hidden; }
+
+.popupZone .popup-list { overflow: hidden; position: relative; width: 100%; }
+
+.popupZone .popup-list img { width: 100%; }
+
+.popupZone .popup-list .bx-wrapper .bx-pager { position: absolute; top: 0; right: 25px; padding-top: 13px; width: 50px; font-size: 14px; color: #fff; text-align: right; font-weight: normal; z-index: 100; }
+
+.popupZone .popup-list .bx-controls-direction { position: absolute; width: 100%; top: 50%; margin-top: -41px; z-index: 100; }
+
+.popupZone .popup-list .bx-wrapper .bx-controls-direction a { position: absolute; display: block; width: 45px; height: 82px; top: 38%; text-indent: -999em; }
+
+.popupZone .popup-list .bx-wrapper .bx-prev { background: url(".//module/img/popup-prev.png") no-repeat 50% 0; left: 3%; }
+
+.popupZone .popup-list .bx-wrapper .bx-next { background: url(".//module/img/popup-next.png") no-repeat 50% 0; right: 3%; }
+
+/*추천도서*/
+.boxWrap { width: 50%; float: left; }
+
+.boxWrap h3 { height: 45px; padding-left: 15px; line-height: 45px; font-size: 16px; color: #222222; border-bottom: 1px solid #dadada; }
+
+.boxWrap .btn { display: block; text-indent: -999em; width: 34px; height: 45px; border-left: 1px solid #dadada; }
+
+.boxWrap .btn.prev { background: url(".//module/img/btn-prev.gif") no-repeat 50% 0; }
+
+.boxWrap .btn.next { background: url(".//module/img/btn-next.gif") no-repeat 50% 0; }
+
+.boxWrap .btn.more { background: url(".//module/img/btn-more.gif") no-repeat 50% 0; }
+
+.boxWrap .title { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-bottom: 9px; font-size: 16px; color: #292929; }
+
+.boxWrap .divid { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; position: relative; padding-bottom: 5px; }
+
+.boxWrap .divid em { position: relative; display: inline-block; margin-right: 8px; padding-right: 9px; }
+
+.boxWrap .divid i:after { display: block; position: absolute; right: 0; top: 0; content: '|'; }
+
+.boxWrap .code { font-size: 13px; padding-bottom: 14px; }
+
+.boxWrap .date, .boxWrap .time { font-size: 13px; padding-bottom: 5px; }
+
+.boxWrap .desc { overflow: hidden; height: 95px; line-height: 1.4; }
+
+.book { position: relative; border: 1px solid #dadada; }
+
+.book .book-controls { overflow: hidden; position: absolute; top: 0; right: 0; }
+
+.book .book-controls li { float: left; }
+
+.book .bookContent { padding: 33px 10px 12px 8%; }
+
+.book .bookContent ul { overflow: hidden; height: 166px; }
+
+.book .bookContent ul li { float: left; }
+
+.book .bookContent ul li a { display: block; overflow: hidden; }
+
+.book .bookContent ul li span, .book .bookContent ul li strong { display: block; color: #444444; }
+
+.book .bookContent .bookImg { float: left; background: gray; position: relative; width: 97px; margin-right: 15px; }
+
+.book .bookContent .bookImg .tag { position: absolute; top: -2px; left: 5px; }
+
+.book .bookContent .bookEx { float: left; width: 49%; }
+
+.book .bookContent .bookEx i:after { display: block; position: absolute; right: 0; top: 0; content: ''; width: 1px; height: 13px; background: #b2b2b2; }
+
+.movie { border: 1px solid #dadada; border-left: none; position: relative; }
+
+.movie .btn { position: absolute; top: 0; right: 0; border-left: none; }
+
+.movie .movieContent ul { padding: 33px 0 26px 8%; }
+
+.movie .movieContent ul:after { content: ""; display: block; clear: both; }
+
+.movie .movieContent ul li span, .movie .movieContent ul li strong { display: block; color: #444444; }
+
+.movie .movieContent .movieImg { float: left; position: relative; width: 97px; margin-right: 15px; }
+
+.movie .movieContent .movieImg .tag { position: absolute; top: -2px; left: 5px; }
+
+.movie .movieContent .movieEx { float: left; width: 49%; }
+
+.movie .movieContent .movieEx .desc { height: 86px; }
+
+.quickLink { position: relative; border: 1px solid #dadada; border-left: none; }
+
+.quickLink h3 { border-bottom: 1px solid #fff; }
+
+.quickLink ul { overflow: hidden; padding: 10px 10.5% 26px 10%; }
+
+.quickLink ul li { float: left; width: 49%; margin-left: 2%; margin-bottom: 5px; background: #a5a5a5; text-align: center; }
+
+.quickLink ul li:first-child { margin-left: 0; }
+
+.quickLink ul li.blue { margin-left: 0; margin-bottom: 0; background: #004be3; }
+
+.quickLink ul li.last { margin-bottom: 0; }
+
+.quickLink ul li.last span { padding-top: 5px; }
+
+.quickLink ul li a { display: block; width: 100%; padding-top: 14px; height: 78px; font-size: 15px; color: #fff; }
+
+.quickLink ul li a span { display: block; padding-top: 15px; }
+
+.calenderWrap { position: relative; border: 1px solid #dadada; border-left: none; overflow: hidden; }
+
+.calenderWrap:after { content: ""; display: block; clear: both; }
+
+.calenderWrap .btn.more { position: absolute; top: 0; right: 0; border-left: none; }
+
+.calenderWrap .cont { overflow: hidden; padding-right: 10px; }
+
+#datepicker .todayChart { width: 30%; float: left; text-align: center; padding-top: 58px; }
+
+#datepicker .todayChart p { font-size: 13px; }
+
+#datepicker .todayChart .nowDate { font-size: 35px; color: #4c4c4c; display: block; padding-top: 4px; }
+
+#datepicker .todayChart .checkList { display: inline-block; text-align: left; padding-top: 14px; font-size: 12px; color: #222; }
+
+#datepicker .todayChart .checkList li { position: relative; padding-bottom: 5px; }
+
+#datepicker .todayChart .checkList li span { position: relative; padding-left: 15px; }
+
+#datepicker .todayChart .checkList li span:after { display: block; content: ""; position: absolute; left: 0; top: 2px; width: 10px; height: 10px; background: #929292; border-radius: 10px; }
+
+#datepicker .todayChart .checkList li .hoil:after { background: #eb5722; }
+
+#datepicker .todayChart .checkList li .event:after { background: #156da8; }
+
+#datepicker .ui-datepicker-title { color: #353535; font-size: 23px; padding: 0 10px; }
+
+#datepicker .ui-datepicker-title .number { font-weight: bold; }
+
+#datepicker .ui-widget-content { float: right; position: relative; width: 70%; padding-top: 13px; text-align: center; }
+
+#datepicker .ui-datepicker-prev { position: absolute; top: 15px; left: 15%; display: inline-block; width: 13px; height: 21px; background: url(".//module/img/btn-c-prev.png") no-repeat 50% 50%; text-indent: -999em; }
+
+#datepicker .ui-datepicker-next { position: absolute; top: 15px; left: 78%; display: inline-block; width: 13px; height: 21px; background: url(".//module/img/btn-c-next.png") no-repeat 50% 50%; text-indent: -999em; }
+
+#datepicker .ui-datepicker-calendar { width: 100%; margin-top: 7px; min-height: 182px; color: #3b3b3b; text-align: center; font-size: 11px; line-height: 2.4; }
+
+#datepicker .ui-datepicker-calendar th { font-weight: normal; }
+
+#datepicker .ui-datepicker-calendar .ui-datepicker-week-end { color: #156da8; }
+
+#datepicker .ui-datepicker-calendar .ui-datepicker-week-end:first-child { color: #eb5722; }
+
+#datepicker .ui-datepicker-calendar .hoil { font-weight: bold; color: #eb5722; }
+
+#datepicker .ui-datepicker-calendar .event { font-weight: bold; color: #156da8; }
+
+#datepicker .ui-datepicker-calendar .ui-datepicker-today { color: #fff; background: url(".//module/img/bg-today.png") no-repeat 50% 50%; }
+
+.rowbox { overflow: hidden; margin-top: 32px; }
+
+.column { width: 50%; float: left; }
+
+.banner { clear: both; margin-top: 30px; margin-bottom: 42px; width: 100%; }
+
+.banner .bannerWrap { position: relative; overflow: hidden; border: 1px solid #dadada; padding: 22px 15px 17px 15px; height: 45px; }
+
+.banner h3 { float: left; width: 11%; }
+
+.banner .bannerBtn { overflow: hidden; position: absolute; top: 45px; }
+
+.banner .bannerBtn li { float: left; }
+
+.banner .bannerBtn li a { display: block; width: 26px; height: 27px; text-indent: -999em; }
+
+.banner .bannerBtn li a.prev { background: url(".//module/img/btn-b-prev.gif") no-repeat 50% 0; }
+
+.banner .bannerBtn li a.stop { display: none; background: url(".//module/img/btn-b-stop.gif") no-repeat 50% 0; }
+
+.banner .bannerBtn li a.stop.active { display: block; }
+
+.banner .bannerBtn li a.play { display: none; background: url(".//module/img/btn-b-play.gif") no-repeat 50% 0; }
+
+.banner .bannerBtn li a.play.active { display: block; }
+
+.banner .bannerBtn li a.next { background: url(".//module/img/btn-b-next.gif") no-repeat 50% 0; }
+
+.banner .bannerBtn li a.more { background: url(".//module/img/btn-b-more.gif") no-repeat 50% 0; width: 27px; }
+
+.banner .bannerBox { overflow: hidden; float: left; width: 89%; height: 45px; }
+
+.banner .bannerBox ul { overflow: hidden; width: 100%; }
+
+.banner .bannerBox ul li { float: left; margin-right: 11px; }
+
+@media (max-width: 1000px) { /**/
+  .logo a { margin-left: 20px; }
+  .quickMenu li { width: 33.333%; }
+  .quickMenu li:nth-child(4) a:after { display: none; }
+  .notice .con { overflow-x: scroll; }
+  .notice .con ul { min-width: 1000px; }
+  .popupZone .popup-list .bx-wrapper .bx-controls-direction a { top: 28%; }
+  .column { width: 100%; }
+  .quickLink, .calenderWrap { border-top: none; }
+  .banner .bannerWrap { display: none; }
+  .footer { display: none; }
+  .address { padding-left: 10px; padding-right: 10px; }
+  /**/ }
+
+@media all and (max-width: 765px) { /**/
+  .searchBox { width: 100%; }
+  .quickMenu { border-radius: 0; box-shadow: none; border-bottom: 1px solid #dadada; }
+  .quickMenu li { width: 50%; }
+  .quickMenu li:nth-child(4) a:after { display: block; }
+  .quickMenu li:nth-child(3) a:after, .quickMenu li:nth-child(5) a:after { display: none; }
+  /**/ }
+
+@media all and (max-width: 580px) { /**/
+  #Container { padding-top: 40px; }
+  .boxWrap { width: 100%; }
+  .quickMenu li { width: 50%; }
+  .book { border-bottom: none; }
+  .bx-controls-direction { display: none; }
+  .quickLink ul { padding: 0; }
+  .sns { display: none; }
+  .notice .btn { display: block; }
+  .notice .tabMenu { display: block; margin-bottom: 10px; }
+  .notice .tabMenu li { width: 80px; }
+  .notice .tabMenu li.on a { color: #004be3; border: none; background: #fff; }
+  .notice .tabMenu li a { border: none; background: #fff; }
+  /**/ }
+
+/*# sourceMappingURL=main.css.map */
