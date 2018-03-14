@@ -38,4 +38,5 @@ function init() {
         // yt api is ready
     });
     //master -1
+    //master - 2
 }
