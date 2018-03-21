@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        .box1, .box2, .box3, .box4, .box5,.section-caution{height: 1400px;text-align: center;}
+        #header{height: 1700px;background: lightgrey;}
+        .box1{background: lightcoral;}
+        .box2{background: lightgoldenrodyellow;}
+        .box3{background: lightpink;}
+        .box4{background: lightsalmon;}
+        .box5{background: lightseagreen;}
+        .section-caution{background: lightskyblue;}
+        #footer{height: 300px;background: lightcyan;}
+.goTop{}
+
+        [data-goTop='goTop'] { background: url("http://ui-static.korea.ncsoft.corp/promo/lineage/event/2018/180000_teamproject/img/Atype/btn-top.png") no-repeat 50% 0; left: auto; display: block; width: 40px; height: 40px; right: 30px; text-indent: -9999em; }
+
+        [data-goTop='goTop'].fix { position: fixed; bottom: 30px; }
+
+        [data-goTop='goTop'].stay { position: absolute; }
+
+        @media only screen and (max-width: 1260px) { [data-goTop='goTop'].fix { left: 50%; margin-left: 550px; } }
+
+
+
+        .section-caution { position: relative; overflow: visible; background-color: #191919; }
+
+        .section-caution .disc-wrap { display: none; width: 1050px; padding-left: 50px; margin: 0 auto; padding-bottom: 80px; text-indent: 0; }
+
+        .section-caution .disc-wrap h2 { background: url("http://ui-static.korea.ncsoft.corp/promo/lineage/event/2018/180000_teamproject/img/Atype/tit-notice2.png") no-repeat 50% 0; width: 169px; height: 24px; text-indent: -9999em; }
+
+        .section-caution .disc-wrap .disc { margin-top: 20px; font: 12px/24px 'Dotum'; }
+
+        .section-caution .disc-wrap .disc ul { list-style: none; }
+
+        .section-caution .disc-wrap .disc a { font-weight: bold; text-decoration: underline; }
+
+        .section-caution .disc-wrap .disc span { display: block; padding-left: 16px; }
+
+        .section-caution .btn-arrow { border:0; text-indent: -9999em;outline:none; position: absolute; top: -9px; left: 50%; width: 90px; height: 80px; margin-left: -45px; background: url("http://ui-static.korea.ncsoft.corp/promo/lineage/event/2018/180000_teamproject/img/Atype/btn-arrow.png") no-repeat 50% 0; z-index: 100; margin-left: -45px; overflow: visible; -ms-transform: rotate(0deg); transform: rotate(0deg); }
+
+        .section-caution:before { display: block; content: ''; background: url("http://ui-static.korea.ncsoft.corp/promo/lineage/event/2018/180000_teamproject/img/Atype/tit-notice1.png") no-repeat 50% 50%; height: 80px; transition-duration: .5s; }
+
+        .section-caution.show:before { transition: all; transition-duration: .5s; opacity: 0; background-position: 50% 200%; }
+
+        .section-caution.show .btn-arrow { width: 32px; height: 22px; margin-left: -16px; -ms-transform: rotate(180deg); transform: rotate(180deg); }
+    </style>
+    <script src="https://code.jquery.com/jquery-2.0.3.js"></script>
+</head>
+<body>
+<div id="header">header</div>
+<div class="box1">box1</div>
+<div class="box2">box2</div>
+<div class="box3">box3</div>
+<div class="box4">box4</div>
+<div class="box5">box5</div>
+<div class="section-caution" data-folding="folding">
+    <button class="btn-arrow">내용 보기</button>
+    <div class="disc-wrap">
+        <h2>주의사항</h2>
+        <ol class="disc">
+            <li>1. 붉은 기사단 모집! 이벤트는 캐릭터와 상관없이 계정당 1회 참여 가능합니다.</li>
+            <li>2. 신규/복귀 전용 이용권은 구매 가능 기간이 지정되어 있으니, 이용에 유의해 주시기 바랍니다.</li>
+            <li>3. 신규/복귀 전용 이용권을 환불할 경우 재구매 및 다음 개월차 연속 결제가 불가하오니, 유의해 주시기 바랍니다.</li>
+            <li>4. 다음 차 이용권 구매를 위해서는 전 차수 이용권을 20일이상 유지하셔야 다음 차수 이용권 구매가 가능하니, 유의해 주시기 바랍니다.</li>
+            <li>5. 해당 이용권은 각 개월차별로 계정당 1회만 구매가 가능합니다.</li>
+            <li>6. 고대한 용사의 상자는 수령한 클래스에 맞는 아이템이 지급되니 수령 시, 유의해 주시기 바랍니다.</li>
+            <li>7. 아이템 쿠폰 및 무료이용권 쿠폰은 2015년 11월 18일(수) 정기점검 전까지 사용 가능합니다.</li>
+            <li>8. 이벤트 쿠폰은 [쿠폰함]을 통해 확인할 수 있으며, 쿠폰으로 지급받은 아이템은 2016년 1월 6일(수) 정기점검 시 일괄삭제 됩니다.</li>
+            <li>9. ‘거꾸로 모래시계’ 아이템을 통한 기간 연장은 아이템 당 1회까지만 연장할 수 있습니다.</li>
+            <li>10. 테스트 서버는 본 이벤트의 아이템 수령이 불가합니다.</li>
+            <li>11. 게임 이용 제한 계정은 이벤트 참여가 제한됩니다.</li>
+            <li>12. 본 이벤트는 <a href="https://rc-lineage.plaync.com/board/event/event_agreement">리니지 이벤트 규약</a>을
+                따릅니다.
+            </li>
+        </ol>
+    </div>
+</div>
+<div id="footer">footer</div>
+<div class="goTop"></div>
+</body>
+<script src="topBtn.js"></script>
+</html>
