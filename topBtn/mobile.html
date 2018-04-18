@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      class="mobile">
+<head>
+
+    <title>퓨어 엘릭서 : plaync 리니지</title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="user-scalable=no, maximum-scale=1.0, minimum-scale=1.0, width=device-width, initial-scale=1.0">
+
+
+    <!--// open graph protocol -->
+    <meta property="og:title" content="퓨어 엘릭서">
+    <meta property="og:image" content="http://ui-static.korea.ncsoft.corp/promo/lineage/event/2018/180000_teamproject/img/Atype/sns.jpg">
+    <meta name="description" content="엘릭서 제작에 실패했다면 한번 더 도전! 35일간의 푸짐한 출석 보상과 PC방 보상은 덤!">
+    <!-- open graph protocol //-->
+
+    <!--// twitter image -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="퓨어 엘릭서">
+    <meta name="twitter:description" content="엘릭서 제작에 실패했다면 한번 더 도전! 35일간의 푸짐한 출석 보상과 PC방 보상은 덤!">
+    <meta name="twitter:image" content="http://ui-static.korea.ncsoft.corp/promo/lineage/event/2018/180000_teamproject/img/Atype/sns.jpg">
+    <!-- twitter image //-->
+
+    <link rel="shortcut icon" href="http://ui-static.korea.ncsoft.corp/common/lineage.ico" type="image/x-icon" />
+    <link rel="icon" href="http://ui-static.korea.ncsoft.corp/common/lineage.ico" type="image/x-icon" />
+
+
+
+    <link rel="stylesheet" href="http://ui-static.korea.ncsoft.corp/uikit/viewer/v1.0/viewer.css">
+    <link rel="stylesheet" href="http://ui-static.korea.ncsoft.corp/promokit/dist/css/promokit.css">
+    <link rel="stylesheet" href="http://ui-static.korea.ncsoft.corp/promo/lineage/event/2018/180000_teamproject/lib/swiper.min.css">
+
+    <link rel="stylesheet" href="http://ui-static.korea.ncsoft.corp/promo/lineage/event/2018/180000_teamproject/css/m.promo.Atype.css">
+
+    <link rel="stylesheet" href="http://ui-static.korea.ncsoft.corp/uikit/cnb/v2/css/nc-cnb.css">
+
+    <script src="http://ui-static.korea.ncsoft.corp/vendor/jquery/v3.1.0/jquery-3.1.0.min.js"></script>
+    <script type="text/javascript" src="http://static.plaync.co.kr/common/support/launcherPluginLoader.js?v=20120608"></script>
+
+
+    <script>
+        function GNBLogin(){
+            var loginURL = "http:\/\/op.mlogin.plaync.com\/login\/signin";
+            var location = document.location.href;
+            if(location !== '' && location.indexOf('#') > 0) {
+                location = location.substring(0, location.lastIndexOf("#"));
+            }
+            var returnurl = "?site_id=31&return_url=" + escape(location);
+            document.location.href = loginURL + returnurl;
+        }
+
+        function GNBLogout(){
+            var FrmGNBLogout = $("#FrmGNBLogout");
+            var location = document.location.href;
+            if(location !== '' && location.indexOf('#') > 0) {
+                location = location.substring(0, location.lastIndexOf("#"));
+            }
+            FrmGNBLogout.find('input[name="return_url"]').val(location);
+            FrmGNBLogout.submit();
+        }
+    </script>
+
+
+</head>
+<body>
+<form name="FrmGNBLogout" id="FrmGNBLogout" method="post" action="https://mlogin.plaync.com/login/signout">
+    <input type="hidden" name="return_url" value="">
+</form>
+<script type="text/javascript"> //<![CDATA[
+$('[name="return_url"]').val(location.href);
+var siteFlag = 'lineage1';
+var loginLinkStyle = 'js';
+
+var isLoginFlag = 'N';
+var loginLinkURL = 'GNBLogin()';
+
+//]]>
+</script>
+
+
+<div id="container" class="container">
+    <header id="header">
+        h1><span>신규, 복귀 용사 대상</span>붉은 기사단 모집</h1>
+        <p>기간 :2018. 1. 31. (수) 정기점검 후 ~ 3. 14. (수) 정기점검 전</p>
+        <p>대상: 신규 또는 90일 동안 리니지를 접속하지 않은 고객</p>
+        <a href="#;" class="btn-link-event">이벤트 리스트</a>
+        <img src="http://ui-static.korea.ncsoft.corp/promo/lineage/event/2018/180000_teamproject/img/Atype/m/m-header.jpg" alt="">
+    </header>
+
+    <section data-id="section1" data-contents="con">
+        <div data-id="section1_1" data-contents="scon" class="section-1-1">
+            <h2>신규/복귀 혜택</h2>
+            <p>어떤 변화가 그대를 기다리고 있을까. 그 운명의 여정에 함께하고 싶다면 줌비하라.
+                거대한 운명을 맞이한 그대를 위해 강력한 혜택이 쏟아진다!
+            </p>
+            <div>
+                <span>+6 ~+9 무기 ,+5 ~+8 방어구</span>
+                +
+                <span>+2 롬티스의 귀걸이, +2 스냅퍼의 반지</span>
+                +
+                <span>7일 15시간 무료 이용권</span>
+                <a href="#layer-1" data-layer="open" class="btn-link-detail">혜택 자세히 보기</a>
+            </div>
+            <ol>
+                <li><strong>step 1</strong>로그인 후 [강화권 받기] 클릭하여 강화권 획득, 기본 5장 + 매일 1장 추가</li>
+                <li><strong>step 2</strong>획득한 강화권으로 포르세의 검 강화</li>
+                <li><strong>step 3</strong>강화 수치에 해당하는 무기/방어구를 받고 싶다면 [혜택받기] 클릭</li>
+                <li><strong>step 4</strong>10월 14일 신규/복귀 혜택이 담긴 쿠폰 발급</li>
+            </ol>
+            <img src="http://ui-static.korea.ncsoft.corp/promo/lineage/event/2018/180000_teamproject/img/Atype/m/m-sec-1-1.jpg" alt="">
+        </div>
+        <div data-id="section1_2" data-contents="scon" class="section-1-2">
+            <h3>인챈트에 성공한 자 원하는 아이템을 얻으리</h3>
+            <p>강화권 받기는 PC웹에서 받을 수 있습니다.</p>
+            <p>강화권을 받고 간절한 마음을 담아 포르세의 검 강화에 도전하세요!</p>
+            <a href="#;" class="btn-link-challenge">도전 인챈트</a>
+            <img src="http://ui-static.korea.ncsoft.corp/promo/lineage/event/2018/180000_teamproject/img/Atype/m/m-sec-1-2.jpg" alt="">
+        </div>
+        <div data-id="section1_3" data-contents="scon" class="section-1-3">
+            <dl>
+                <dt>BONUS 캐릭터 이미지! 모두 그대에게!</dt>
+                <dd>
+                    <ul class="viewer-list">
+                        <li><a href="#;" class="btn-opener">이미지 자세히보기</a></li>
+                        <li><a href="#;" class="btn-opener">이미지 자세히보기</a></li>
+                        <li><a href="#;" class="btn-opener">이미지 자세히보기</a></li>
+                        <li><a href="#;" class="btn-opener">이미지 자세히보기</a></li>
+                        <li><a href="#;" class="btn-opener">이미지 자세히보기</a></li>
+                        <li><a href="#;" class="btn-opener">이미지 자세히보기</a></li>
+                        <li><a href="#;" class="btn-opener">이미지 자세히보기</a></li>
+                    </ul>
+                </dd>
+            </dl>
+            <p>원하는 캐릭터 이미지 선택! 이미지 뷰어에서 다운받으실 수 있습니다.</p>
+            <img src="http://ui-static.korea.ncsoft.corp/promo/lineage/event/2018/180000_teamproject/img/Atype/m/m-sec-1-3.jpg" alt="">
+        </div>
+    </section>
+    <section data-id="section2" data-contents="con">
+        <div data-id="section2_1" data-contents="scon" class="section-2-1">
+            <h2>신규/복귀 전용 이용권</h2>
+            <p>아이템 시간 연장, 봉인 해제 그리고 탐나는 성장의 열매까지 새로운 시작에 큰 힘이 되어줄 전용 이용권이 그대를 기다린다!</p>
+            <p><strong>30일 300시간</strong>빛나는 파워 패키지/버프패키지/추가 구성품 세일</p>
+            <div>+</div>
+            <ul>
+                <li><span>1개월차</span>방어구 기간 연장 </li>
+                <li><span>2개월차</span>봉인 해제<strong>30% 할인</strong></li>
+                <li><span>3개월차</span>탐나느 성장의 열매 <strong>50% 할인</strong></li>
+            </ul>
+            <p>최소 1개월차 이용권을 구매한 분들만 2개월차 이용권 구매가능하며, 이후 연속 구매가 가능합니다. (계정당 1회 구매가능 )</p>
+            <img src="http://ui-static.korea.ncsoft.corp/promo/lineage/event/2018/180000_teamproject/img/Atype/m/m-sec-2-1.jpg" alt="">
+        </div>
+        <div data-id="section2_2" data-contents="scon" class="section-2-2">
+            <h3>이용권 혜택 상세 안내</h3>
+            <p>본 이용권은 10월 14일 부터 PC웹 리니지N샵에서 구매할 수 있습니다</p>
+            <img src="http://ui-static.korea.ncsoft.corp/promo/lineage/event/2018/180000_teamproject/img/Atype/m/m-sec-2-2.jpg" alt="">
+        </div>
+        <div data-id="section2_3" data-contents="scon" class="section-2-3">
+            <h3>탐나는 성장의 열매 효과</h3>
+            <div class="video">
+                <div class="player" id="player-1"></div>
+            </div>
+            <img src="http://ui-static.korea.ncsoft.corp/promo/lineage/event/2018/180000_teamproject/img/Atype/m/m-sec-2-3.jpg" alt="">
+        </div>
+    </section>
+    <section data-id="section3" data-contents="con">
+        <div data-id="section3_1" data-contents="scon" class="section-3">
+            <div>
+                <h2>업데이트 겔러리</h2>
+                <div class="gellary-area swiper-container">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <img src="http://ui-static.korea.ncsoft.corp/promo/lineage/event/2018/180000_teamproject/img/Atype/m/m-slider1.jpg" alt="">
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="http://ui-static.korea.ncsoft.corp/promo/lineage/event/2018/180000_teamproject/img/Atype/m/m-slider2.jpg" alt="">
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="http://ui-static.korea.ncsoft.corp/promo/lineage/event/2018/180000_teamproject/img/Atype/m/m-slider3.jpg" alt="">
+                        </li>
+                    </ul>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <img src="http://ui-static.korea.ncsoft.corp/promo/lineage/event/2018/180000_teamproject/img/Atype/m/m-sec-3.jpg" alt="">
+        </div>
+    </section>
+    <section class="section-caution">
+        <a href="#;" class="btn-arrow">열기</a>
+        <div class="disc-wrap">
+            <h2>주의사항</h2>
+            <ol class="disc">
+                <li>1. 붉은 기사단 모집! 이벤트는 캐릭터와 상관없이 계정당 1회 참여 가능합니다.</li>
+                <li>2. 신규/복귀 전용 이용권은 구매 가능 기간이 지정되어 있으니, 이용에 유의해 주시기 바랍니다.</li>
+                <li>3. 신규/복귀 전용 이용권을 환불할 경우 재구매 및 다음 개월차 연속 결제가 불가하오니, 유의해 주시기 바랍니다.</li>
+                <li>4. 다음 차 이용권 구매를 위해서는 전 차수 이용권을 20일이상 유지하셔야 다음 차수 이용권 구매가 가능하니, 유의해 주시기 바랍니다.</li>
+                <li>5. 해당 이용권은 각 개월차별로 계정당 1회만 구매가 가능합니다.</li>
+                <li>6. 고대한 용사의 상자는 수령한 클래스에 맞는 아이템이 지급되니 수령 시, 유의해 주시기 바랍니다.</li>
+                <li>7. 아이템 쿠폰 및 무료이용권 쿠폰은 2015년 11월 18일(수) 정기점검 전까지 사용 가능합니다.</li>
+                <li>8. 이벤트 쿠폰은 [쿠폰함]을 통해 확인할 수 있으며, 쿠폰으로 지급받은 아이템은 2016년 1월 6일(수) 정기점검 시 일괄삭제 됩니다.</li>
+                <li>9. ‘거꾸로 모래시계’ 아이템을 통한 기간 연장은 아이템 당 1회까지만 연장할 수 있습니다.</li>
+                <li>10. 테스트 서버는 본 이벤트의 아이템 수령이 불가합니다.</li>
+                <li>11. 게임 이용 제한 계정은 이벤트 참여가 제한됩니다.</li>
+                <li>12. 본 이벤트는 <a class="btn-link-rule" href="https://rc-lineage.plaync.com/board/event/event_agreement">리니지 이벤트 규약</a>을
+                    따릅니다.
+                </li>
+            </ol>
+            <img src="http://ui-static.korea.ncsoft.corp/promo/lineage/event/2018/180000_teamproject/img/Atype/m/m-caution.jpg" alt="">
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="copy-wrap">
+            © NCSOFT
+            <div class="share"></div>
+        </div>
+    </footer>
+    <div class="goTop"></div>
+</div>
+
+<script src="http://ui-static.korea.ncsoft.corp/uikit/cnb/v2/js/cnb.js"></script><div id="dimmed"></div>
+<script src="http://ui-static.korea.ncsoft.corp/promo/common/js/v2.0/cnb.js"></script>
+
+<script>
+    new nc.promo.cnb({
+        image: {
+            "large": "http://ui-static.korea.ncsoft.corp/promo/common/bi/lineage/lineage-type1.png",
+            "medium": "http://ui-static.korea.ncsoft.corp/promo/common/bi/lineage/lineage-type1.png",
+            "mediumSticky": "http://ui-static.korea.ncsoft.corp/promo/common/bi/lineage/lineage-type2.png",
+            "lnb": "http://ui-static.korea.ncsoft.corp/promo/common/bi/lineage/lineage-type2.png"
+        },
+        color: {
+            "large": "rgba(16,16,16,0.4)",
+            // "medium": "rgba(16,16,16,0.4)",
+            "mediumSticky": "#AA8060",
+            "lnb": "#AA8060"
+        }
+    });
+</script>
+
+
+<script src="http://ui-static.korea.ncsoft.corp/common/logger/plaync_logger_footer.js"></script>
+<script type="text/javascript" src="http://static.plaync.co.kr/common/logger/pna_ncsoft_net.js"></script>
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics : lineage pc -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-9714319-7"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-9714319-7');
+</script>
+
+<script src="http://ui-static.korea.ncsoft.corp/promo/lineage/event/2018/180000_teamproject/lib/swiper.min.js"></script>
+<script src="http://ui-static.korea.ncsoft.corp/promokit/dist/js/promokit.js"></script>
+<script src="http://ui-static.korea.ncsoft.corp/uikit/viewer/v1.0/viewer.js"></script>
+<script src="topBtn.js"></script>
+
+
+
+</body>
+</html>

@@ -239,6 +239,21 @@ jQuery(function($){
         this.stopPoint = ($(document).height()-this.$window.height())-( this.$caution.height() + $('#footer').height() + gap);
 
         this.init();
+        var that = this;
+
+        if(/(android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini)/i.test(navigator.userAgent.toLowerCase())) {
+            this.$window.resize(function () {
+                that.resize(gap);
+            });
+        }
+    };
+
+    TopBtn.prototype.resize = function(gap){
+        this.bottomGap = this.$caution.position().top +( gap *(-1));
+        this.currentPos = this.$window.scrollTop();
+        this.startPoint = $('#header').height();
+        this.stopPoint = ($(document).height()-this.$window.height())-( this.$caution.height() + $('#footer').height() + gap);
+        this.positionChk();
     };
 
     TopBtn.prototype.init = function(){
@@ -249,12 +264,14 @@ jQuery(function($){
 
     TopBtn.prototype.positionChk = function(){
         if(this.currentPos >= this.startPoint) {
+
             if(this.currentPos >= this.stopPoint){
                 this.$topBtn.css({top: this.bottomGap}).show().addClass('stay');
             }else {
                 this.$topBtn.css({top:'auto'}).show().addClass('fix');
             }
         }else{
+
             this.$topBtn.hide();
         }
     };
@@ -459,7 +476,7 @@ $(document).ready(function() {
 
     }
     $('.goTop').TopBtn();
-    $('body').CoachMark({direction:'horizental'});
+    $('body').CoachMark({direction:'vertical'});
     $('.section-caution').Folding();
 });
 
