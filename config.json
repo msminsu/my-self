@@ -2,7 +2,7 @@
 	"project": "moduleStudy",
 	"author": "an-gun",
 	"drive": {
-		"window": "Z:",
+		"window": "D:",
 		"mac": "/Volumes/wwwroot"
 	},
 	"sass_output": "compact",
@@ -10,5 +10,5 @@
 	"name": "book",
 	"year": "2017",
 	"category": "",
-	"folder": "fullpage"
+	"folder": "css3-test"
 }

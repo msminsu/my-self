@@ -42,3 +42,25 @@ a:hover { color: $linkColor;  }
 .log{ width: 1276px; height: 369px;@include bg($bg:'logo.png');
   mix-blend-mode: screen;
 }
+
+@mixin closeAni($width:false, $height:false,$bg:false,$round:false){
+  transition: 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  &:before,&:after{display: block; position: absolute; content:'';
+    margin:auto;left: 0;top: 0;right: 0;bottom: 0;
+    //left:50%;margin-left:-($width/2);margin-top: -($height/2);
+    width: $width;height: $height; background: $bg;border-radius: $round;
+  }
+  &:before{transform: rotate(45deg)}
+  &:after{transform: rotate(-45deg)}
+  &:hover{transform: rotate(-90deg);}
+}
+
+button{ margin: 0;padding: 0;display: block;text-indent: -999em;border:0;background: none;
+  font-size:0;position: absolute;outline:1px solid red;
+  width: 60px;height: 60px;
+  
+  @include closeAni($width:60px,$height:1px,$bg:red);
+}
+
+
+

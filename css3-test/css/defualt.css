@@ -1,0 +1,37 @@
+@charset "UTF-8";
+/* defualt setting */
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select, strong { margin: 0; padding: 0; letter-spacing: -1px; }
+
+body { background: #fff; color: #333; margin: 0; padding: 0; font-family: "나눔고딕", NanumGothic, Helvetica, AppleGothic, Sans-serif, ngwoff, ngeot, "굴림", gulrem; font-size: 14px; line-height: 1; }
+
+button { outline: 0; background: none; border: 0; cursor: pointer; }
+
+img { border: 0; vertical-align: top; }
+
+ul, ol { list-style: none; }
+
+em { font-style: normal; }
+
+table { border-spacing: 0; }
+
+caption { height: 0; overflow: hidden; font-size: 0; }
+
+a { color: #555; text-decoration: none; }
+
+a:hover { color: #555; }
+
+.box { width: 1276px; height: 369px; background: url("..//img/bg.jpg") no-repeat 50% 0; }
+
+.log { width: 1276px; height: 369px; background: url("..//img/logo.png") no-repeat 50% 0; mix-blend-mode: screen; }
+
+button { margin: 0; padding: 0; display: block; text-indent: -999em; border: 0; background: none; font-size: 0; position: absolute; outline: 1px solid red; width: 60px; height: 60px; transition: 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+
+button:before, button:after { display: block; position: absolute; content: ''; margin: auto; left: 0; top: 0; right: 0; bottom: 0; width: 60px; height: 1px; background: red; border-radius: false; }
+
+button:before { transform: rotate(45deg); }
+
+button:after { transform: rotate(-45deg); }
+
+button:hover { transform: rotate(-90deg); }
+
+/*# sourceMappingURL=defualt.css.map */

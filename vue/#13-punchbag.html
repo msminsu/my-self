@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VueJS Tutorials</title>
+    <link rel="stylesheet" href="13-sample.css">
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+
+<div id="vue-app">
+    <!--/* bag image */-->
+    <div id="bag" v-bind:class="{burst:ended}"></div>
+
+    <!--/* bag health */-->
+    <div id="bag-health">
+        <div v-bind:style="{width: health+'%'}">{{health}}</div>
+    </div>
+
+    <!--/* game controls */-->
+    <div id="controls">
+        <button v-on:click="punch" v-show="!ended">Punch</button>
+        <button v-on:click="restart" v-show="ended">Restart</button>
+    </div>
+
+</div>
+
+<script src="13-sample.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

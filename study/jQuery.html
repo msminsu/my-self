@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="user-scalable=no, maximum-scale=1.0, minimum-scale=1.0, width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-2.0.3.js"></script>
+    <style>
+        *{margin: 0;padding: 0;}
+
+        li{list-style: none}
+        .s1{background: url(./m-header.jpg) 50% 0 no-repeat; background-size: cover; height: 100%;}
+        .s2{width:100%; height: 700px; background:salmon;}
+        .s3{width:100%; height: 700px; background:goldenrod;}
+        .s4{width:100%; height: 700px; background:blueviolet;}
+        .s5{width:100%; height: 700px; background:khaki;}
+
+    </style>
+<body>
+<section class="s1">s1</section>
+<section class="s2">s2</section>
+<section class="s3">s3</section>
+<section class="s4">s4</section>
+<section class="s5">s5</section>
+<div class="section-caution">
+    <h2>주의사항</h2>
+    <div class="disc close">
+        <ol>
+            <li>1. 당첨자 선정은 내부 심사에 의해 결정되며, 주제 적합성을 중점으로 심사 됩니다.</li>
+            <li>2. 19주년 선물상자는 2018년 2월 28일 삭제 됩니다. (교환/삭제 X, 창고 O)</li>
+            <li>3. 이벤트 양식에 맞지 않는 게시물은 이벤트의 당첨 대상에서 제외 될 수 있습니다.</li>
+            <li>4. 이벤트 주제와 무관한 내용은 삭제 및 당첨 무효 처리 될 수 있습니다.</li>
+            <li>5. 게임 이용에 제재를 받은 계정 및 캐릭터는 이벤트의 당첨 대상에서 제외 됩니다.</li>
+            <li>6. 운영정책에 위배되는 내용을 작성한 게시글은 이벤트 당첨 대상에서 제외 됩니다.</li>
+            <li>7. 당첨자 발표는 2018. 1. 5. (금) 리니지 홈페이지를 통해 확인 하실 수 있습니다.</li>
+            <li>8. 응모 내용에 대한 모든 권한은 리니지와 (주)엔씨소프트에 귀속되며, 향후 마케팅 자료로 활용 될 수 있습니다.</li>
+            <li>9. 오프라인 경품 당첨자는 상품 배송을 위해 당첨 고객님들께 별도의 개인정보 수집 절차가 진행 될 예정입니다.</li>
+            <li>10. 이벤트 상품은 회사 사정에 의해 변경될 수 있으며, 제세공과금은 회사 부담입니다.</li>
+            <li>11. 본 이벤트는 <a th:href="|${ui['home.lineage']}/board/event/event_agreement">리니지 이벤트 규약</a>을 따릅니다.</li>
+        </ol>
+    </div>
+</div>
+
+<script>
+    (function($){
+
+        var $caution = $('.section-caution');
+        var $cautionTitle =$caution.find('h2');
+        var $disc = $caution.find('.disc');
+
+        $disc.hasClass('open')?$disc.css('display','block'):$disc.css('display','none');
+
+        $cautionTitle.on('click', function(){
+            if($disc.hasClass('open')){
+                $disc.removeClass('open');
+                $disc.addClass('close');
+                $disc.stop().slideUp();
+            }else{
+                $disc.removeClass('close');
+                $disc.addClass('open');
+                $disc.stop().slideDown();
+            }
+        });
+
+
+
+        // height: 100%  비율에 따른 공백 여부 ? 100% bgcolor? 이미지 비율에 맞게 커지거나 작어지면
+        // 이미지가 잘리거나. 배경이 보여짐
+        $('.s1').height($(window).height());
+        console.log($(window).height());
+
+    })(jQuery);
+
+ myname = 'global';
+
+ function  func() {
+     console.log(myname);
+     var myname = 'local';
+     console.log(myname);
+ }
+
+ func();
+</script>
+</body>
+</html>

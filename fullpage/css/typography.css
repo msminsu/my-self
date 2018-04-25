@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/** @project: typo_web @author: NCSOFT @update : 2017-11-30 11:22:36 */
 /** import */
 html { font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
 
@@ -127,19 +126,19 @@ a:hover { color: #000; }
 
 #fp-nav ul li a span, .fp-slidesNav ul li a span { display: none; }
 
-#fp-nav ul li:nth-child(2) a, .fp-slidesNav ul li:nth-child(2) a { background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/nav1.png") no-repeat 50% 0; }
+#fp-nav ul li:nth-child(2) a, .fp-slidesNav ul li:nth-child(2) a { background: url("../img/nav1.png") no-repeat 50% 0; }
 
 #fp-nav ul li:nth-child(2) a.active, #fp-nav ul li:nth-child(2) a:hover, .fp-slidesNav ul li:nth-child(2) a.active, .fp-slidesNav ul li:nth-child(2) a:hover { background-position: 0 100%; }
 
-#fp-nav ul li:nth-child(3) a, .fp-slidesNav ul li:nth-child(3) a { background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/nav2.png") no-repeat 50% 0; }
+#fp-nav ul li:nth-child(3) a, .fp-slidesNav ul li:nth-child(3) a { background: url("../img/nav2.png") no-repeat 50% 0; }
 
 #fp-nav ul li:nth-child(3) a.active, #fp-nav ul li:nth-child(3) a:hover, .fp-slidesNav ul li:nth-child(3) a.active, .fp-slidesNav ul li:nth-child(3) a:hover { background-position: 0 100%; }
 
-#fp-nav ul li:nth-child(4) a, .fp-slidesNav ul li:nth-child(4) a { background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/nav3.png") no-repeat 50% 0; }
+#fp-nav ul li:nth-child(4) a, .fp-slidesNav ul li:nth-child(4) a { background: url("../img/nav3.png") no-repeat 50% 0; }
 
 #fp-nav ul li:nth-child(4) a.active, #fp-nav ul li:nth-child(4) a:hover, .fp-slidesNav ul li:nth-child(4) a.active, .fp-slidesNav ul li:nth-child(4) a:hover { background-position: 0 100%; }
 
-#fp-nav ul li:nth-child(5) a, .fp-slidesNav ul li:nth-child(5) a { background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/nav4.png") no-repeat 50% 0; }
+#fp-nav ul li:nth-child(5) a, .fp-slidesNav ul li:nth-child(5) a { background: url("../img/nav4.png") no-repeat 50% 0; }
 
 #fp-nav ul li:nth-child(5) a.active, #fp-nav ul li:nth-child(5) a:hover, .fp-slidesNav ul li:nth-child(5) a.active, .fp-slidesNav ul li:nth-child(5) a:hover { background-position: 0 100%; }
 
@@ -147,9 +146,9 @@ a:hover { color: #000; }
 
 .sliderBox button { display: block; width: 36px; height: 69px; position: absolute; top: 50%; margin-top: -34px; text-indent: -999em; }
 
-.sliderBox button.btn-prev { background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/prev.png") no-repeat 50% 0; left: -85px; }
+.sliderBox button.btn-prev { background: url("../img/prev.png") no-repeat 50% 0; left: -85px; }
 
-.sliderBox button.btn-next { background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/next.png") no-repeat 50% 0; right: -85px; }
+.sliderBox button.btn-next { background: url("../img/next.png") no-repeat 50% 0; right: -85px; }
 
 .sliderBox .pages { overflow: hidden; display: inline-block; margin-top: 2%; }
 
@@ -193,54 +192,56 @@ a:hover { color: #000; }
 
 #fullpage .category li.active a, #fullpage .category li a:hover { background-position: 50% 100%; }
 
-.page1 .logo { background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/title1.png") no-repeat 50% 0; }
+.page1 .logo { background: url("../img/title1.png") no-repeat 50% 0; }
 
 .page1 .category { margin-top: 70px !important; }
 
-.page1 .category li:nth-child(1) a { width: 100px; height: 25px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/menu1.png") no-repeat 50% 0; }
+.page1 .category li { color: red; }
 
-.page1 .category li:nth-child(2) a { width: 101px; height: 25px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/menu2.png") no-repeat 50% 0; }
+.page1 .category li:nth-child(1) a { width: 100px; height: 25px; background: url("../img/menu1.png") no-repeat 50% 0; }
 
-.page1 .category li:nth-child(3) a { width: 150px; height: 25px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/menu3.png") no-repeat 50% 0; }
+.page1 .category li:nth-child(2) a { width: 101px; height: 25px; background: url("../img/menu2.png") no-repeat 50% 0; }
 
-.page1 .category li:nth-child(4) a { width: 98px; height: 25px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/menu4.png") no-repeat 50% 0; }
+.page1 .category li:nth-child(3) a { width: 150px; height: 25px; background: url("../img/menu3.png") no-repeat 50% 0; }
 
-.page2 .logo { background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/title2.png") no-repeat 50% 0; }
+.page1 .category li:nth-child(4) a { width: 98px; height: 25px; background: url("../img/menu4.png") no-repeat 50% 0; }
 
-.page2 .category li:nth-child(1) a { width: 34px; height: 18px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/all.png") no-repeat 50% 0; }
+.page2 .logo { background: url("../img/title2.png") no-repeat 50% 0; }
 
-.page2 .category li:nth-child(2) a { width: 139px; height: 23px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/cate2-1.png") no-repeat 50% 0; }
+.page2 .category li:nth-child(1) a { width: 34px; height: 18px; background: url("../img/all.png") no-repeat 50% 0; }
 
-.page2 .category li:nth-child(3) a { width: 124px; height: 23px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/cate2-2.png") no-repeat 50% 0; }
+.page2 .category li:nth-child(2) a { width: 139px; height: 23px; background: url("../img/cate2-1.png") no-repeat 50% 0; }
 
-.page2 .category li:nth-child(4) a { width: 142px; height: 23px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/cate2-3.png") no-repeat 50% 0; }
+.page2 .category li:nth-child(3) a { width: 124px; height: 23px; background: url("../img/cate2-2.png") no-repeat 50% 0; }
 
-.page2 .category li:nth-child(5) a { width: 175px; height: 23px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/cate2-4.png") no-repeat 50% 0; }
+.page2 .category li:nth-child(4) a { width: 142px; height: 23px; background: url("../img/cate2-3.png") no-repeat 50% 0; }
 
-.page3 .logo { background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/title3.png") no-repeat 50% 0; }
+.page2 .category li:nth-child(5) a { width: 175px; height: 23px; background: url("../img/cate2-4.png") no-repeat 50% 0; }
 
-.page3 .category li:nth-child(1) a { width: 34px; height: 18px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/all.png") no-repeat 50% 0; }
+.page3 .logo { background: url("../img/title3.png") no-repeat 50% 0; }
 
-.page3 .category li:nth-child(2) a { width: 173px; height: 23px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/cate3-1.png") no-repeat 50% 0; }
+.page3 .category li:nth-child(1) a { width: 34px; height: 18px; background: url("../img/all.png") no-repeat 50% 0; }
 
-.page4 .logo { background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/title4.png") no-repeat 50% 0; }
+.page3 .category li:nth-child(2) a { width: 173px; height: 23px; background: url("../img/cate3-1.png") no-repeat 50% 0; }
 
-.page4 .category li:nth-child(1) a { width: 34px; height: 18px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/all.png") no-repeat 50% 0; }
+.page4 .logo { background: url("../img/title4.png") no-repeat 50% 0; }
 
-.page4 .category li:nth-child(2) a { width: 128px; height: 23px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/cate4-1.png") no-repeat 50% 0; }
+.page4 .category li:nth-child(1) a { width: 34px; height: 18px; background: url("../img/all.png") no-repeat 50% 0; }
 
-.page4 .category li:nth-child(3) a { width: 119px; height: 23px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/cate4-2.png") no-repeat 50% 0; }
+.page4 .category li:nth-child(2) a { width: 128px; height: 23px; background: url("../img/cate4-1.png") no-repeat 50% 0; }
 
-.page4 .category li:nth-child(4) a { width: 301px; height: 23px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/cate4-3.png") no-repeat 50% 0; }
+.page4 .category li:nth-child(3) a { width: 119px; height: 23px; background: url("../img/cate4-2.png") no-repeat 50% 0; }
 
-.page5 .logo { background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/title5.png") no-repeat 50% 0; }
+.page4 .category li:nth-child(4) a { width: 301px; height: 23px; background: url("../img/cate4-3.png") no-repeat 50% 0; }
 
-.page5 .category li:nth-child(1) a { width: 34px; height: 18px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/all.png") no-repeat 50% 0; }
+.page5 .logo { background: url("../img/title5.png") no-repeat 50% 0; }
 
-.page5 .category li:nth-child(2) a { width: 205px; height: 23px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/cate5-1.png") no-repeat 50% 0; }
+.page5 .category li:nth-child(1) a { width: 34px; height: 18px; background: url("../img/all.png") no-repeat 50% 0; }
 
-.page5 .category li:nth-child(3) a { width: 127px; height: 23px; background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/cate5-2.png") no-repeat 50% 0; }
+.page5 .category li:nth-child(2) a { width: 205px; height: 23px; background: url("../img/cate5-1.png") no-repeat 50% 0; }
 
-.page5 .copy { background: url("http://ui-static.korea.ncsoft.corp/promo/typo//img/copy.png") no-repeat 50% 0; width: 531px; height: 18px; margin: 40px auto 0; text-indent: -999em; }
+.page5 .category li:nth-child(3) a { width: 127px; height: 23px; background: url("../img/cate5-2.png") no-repeat 50% 0; }
+
+.page5 .copy { background: url("../img/copy.png") no-repeat 50% 0; width: 531px; height: 18px; margin: 40px auto 0; text-indent: -999em; }
 
 /*# sourceMappingURL=typography.css.map */
