@@ -7,17 +7,19 @@
       <h3 v-show="ninja.show">{{ninja.speciality}}</h3>
     </li>
   </ul>
+  <button v-on:click="deleteNinja">Delete ninja</button>
 </div>
 </template>
 
 <script>
     export default {
-      props:{
-        ninjas:{
+      props:
+        //['ninjas']
+        {ninjas:{
           type:Array,
-          required:true
-        }
-        },
+            required:true
+          }}
+        ,
      data(){
        return {
         /* ninjas:[
@@ -29,7 +31,12 @@
            {name:'Yoshi',speciality:'Data Diggin', show:false},
          ]*/
        }
-     }
+     },
+      methods:{
+        deleteNinja:function(){
+         this.ninjas.pop();
+        }
+      }
     }
 </script>
 

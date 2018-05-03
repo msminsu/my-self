@@ -3,12 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <title>Animation</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
     <link rel="stylesheet" href="./css/defualt.css">
+    <style>
+        .btn-o{
+            display: block;
+            position: absolute;
+            top: 150px;
+            left: 300px;
+            width: 100px;
+            height: 100px;
+            border:20px solid skyblue;
+            border-radius:200px;
+            transition: all 5s;
+
+        }
+        .btn-x{
+            position: absolute;
+            width: 140px;
+            height: 140px;
+            line-height: 140px;
+            top: 150px;
+            left: 550px;
+            color: red;
+            font-size: 260px;
+            transition: all 3s;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .btn-o.effect,.btn-x.effect{
+            animation:effect_push .3s ;
+        }
+        /*
+        .box:active {
+          animation:effect_push .5s ;
+          }
+         */
+
+
+        @keyframes effect_push {
+
+            20% {
+                transform: scale(.7);
+
+            }
+            63.25% {
+                transform: scale(1.2);
+
+            }
+            100% {
+                transform: scale(1);
+
+            }
+        }
+
+
+        @keyframes effect_vertical {
+            16.65% {
+                transform:translateY(8px);
+            }
+
+            33.3% {
+                transform:translateY(-6px);
+            }
+
+            49.95% {
+                transform:translateY(4px);
+            }
+
+            66.6% {
+                transform:translateY(-2px);
+            }
+
+            83.25% {
+                transform:translateY(1px);
+            }
+
+            100% {
+                transform:translateY(0);
+            }
+        }
+
+    </style>
 </head>
 <body>
 
 
 <button>닫기</button>
-
+<div class="box"></div>
+<div class="btn-o"></div>
+<div class="btn-x">x</div>
 </body>
+<script>
+    $('.btn-o,.btn-x').on('click',function(){
+
+        $(this).addClass('effect').animate({opacity:1},300,function(){
+            $(this).removeClass('effect');
+        });
+
+    })
+
+</script>
 </html>
