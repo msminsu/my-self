@@ -36,7 +36,27 @@
         deleteNinja:function(){
          this.ninjas.pop();
         }
+      },
+      // lifecycle hook
+      beforeCreate(){
+        alert("beforeCreate");
+      },
+      created(){
+        alert("Created");
+      },
+      beforeMount(){
+        alert('beforeMount');
+      },
+      mounted(){
+        alert('mounted');
+      },
+      beforeUpdate(){
+        alert('beforeUpdate');
+      },
+      updated(){
+        alert('updated');
       }
+
     }
 </script>
 
