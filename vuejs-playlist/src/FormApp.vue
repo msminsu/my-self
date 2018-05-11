@@ -1,10 +1,12 @@
 <template>
   <div>
-    <!--<form-one></form-one>-->
-    <component v-bind:is="components"></component>
-    <!--<form-two></form-two>-->
-    <button v-on:clock="component='form-one'">Show form one</button>
-    <button v-on:clock="component='form-two'">Show form two</button>
+   <!-- <form-one></form-one>
+    <form-two></form-two>-->
+    <keep-alive>
+      <component v-bind:is="component"></component>
+    </keep-alive>
+    <button v-on:click="component='form-one'">Show form one</button>
+    <button v-on:click="component='form-two'">Show form two</button>
   </div>
 
 </template>
@@ -20,7 +22,7 @@ export default {
   },
   data () {
     return {
-      components:'form-one'
+      component:'form-two'
     }
   },
   methods:{
