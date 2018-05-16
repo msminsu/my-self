@@ -35,21 +35,52 @@ class App extends Component {
                 ]
             });
         },2000)*/
-     console.log(  fetch('https://jsonplaceholder.typicode.com/posts'));
+
+       this._getMovies();
     }
 
+
+
+
     _renderMovies =()=>{
-       const movies =  this.state.movies.map((movie, index)=>{
-            return  <Movie title={movie.title} poster={movie.poster} key={index}/>
+
+       const movies =  this.state.movies.map(movie=>{
+            return  <Movie
+                title={movie.title}
+                poster={'https://image.tmdb.org/t/p/w500'+movie.backdrop_path}
+                key={movie.id}
+                synopsis={movie.overview}
+                genres ={movie.genre_ids}
+            />
         });
+
         return movies;
     };
 
-  render() {
+    _getMovies = async() =>{
+
+        const movies = await this._callApi();
+        console.log(movies);
+        this.setState({
+            movies
+        });
+    }
+
+    _callApi =()=>{
+
+        return fetch('https://api.themoviedb.org/3/movie/popular?api_key=a7ace44a80ccb723782701298053323d')
+            .then(potato =>potato.json())
+            .then(json => json.results)
+            .catch(err=>console.log(err))
+    };
+
+
+render() {
         console.log('did render');
+        const {movies} =this.state;
     return (
-      <div className="App">
-          {this.state.movies?this._renderMovies() : "Loading"}
+      <div className={movies ? "App":"App--loading"}>
+          {this.state.movies ? this._renderMovies() : "Loading"}
       </div>
     );
   }
