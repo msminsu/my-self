@@ -1,0 +1,63 @@
+
+
+.tab-con{
+  text-indent: 0;
+  width: 1100px;
+  @include position( $left:50%, $top:346px);
+  .tab-server{
+	overflow: hidden;
+	position: absolute;
+	width: 1040px;
+	height: 110px;
+	padding-left: 64px;
+	
+	li{float:left;height: 55px;
+	  border-radius:50px;box-shadow: 0px 14px 43px 0px rgba(0,0,0,0.84);
+	  a{display: block;width: 100%; height: 100%;text-indent: -9999em;}
+	  
+	  &:nth-child(1){width: 169px;@include bg($bg: "server-tab.png", $position: 0 0);}
+	  &:nth-child(2){width: 181px;margin-left: 39px;@include bg($bg: "server-tab.png", $position: -208px 0);}
+	  &:nth-child(3){width: 181px;margin-left: 30px;@include bg($bg: "server-tab.png", $position: -419px 0);}
+	  &:nth-child(4){width: 171px;margin-left: 28px;@include bg($bg: "server-tab.png", $position: -628px 0);}
+	  &:nth-child(5){width: 171px;margin-left: 39px;@include bg($bg: "server-tab.png", $position: -838px 0);}
+	  &.active,&:hover{background-position-y: 100%;}
+	  
+	}
+  }
+  
+  dl{
+	display: none;
+	width: 696px;
+	@include position( $left:50%, $top:112px);
+	letter-spacing: -2px;
+	text-align: center;
+	
+	dt{font-size: 28px; color:#ebe6c2;font-weight: bold;font-family: "맑은고딕","Malgun Gothic";
+	  span{color:#fbf28e;}
+	}
+	dd{
+	  ul{
+		li{ float:left;
+		  width: 331px;height: 344px;
+		  margin-left: 32px;
+		  margin-top: 28px;
+		  &:nth-child(1),&:nth-child(3){margin-left: 0;}
+		  
+		  label{position: relative; display: block;width: 331px;height: 344px;}
+		  strong{display: block;padding: 20px 0 57px;font-size: 18px;color:#fff;font-weight: normal;text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.25);}
+		  label>img{border-radius: 20px;margin-bottom: 12px;}
+		  em{display: block;text-align: center;font-size: 15px;color:#7fa5c9;font-style: normal;
+			img{width: 19px;height: 19px;margin-right: 5px;vertical-align: middle;}
+			span{vertical-align: middle;}
+		  }
+		  input{width: 18px;height: 18px;margin-top: 15px;
+			&:checked ~ i{@include bg($bg: "check-on.png", $position: 0 0);}
+		  }
+		  i{display: block;content:'';position: absolute;top:0;left:0;width: 331px;height: 344px;@include bg($bg: "check-off.png", $position: 0 0);z-index:-1;}
+		  
+		  
+		}
+	  }
+	}
+  }
+}
