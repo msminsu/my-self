@@ -1,0 +1,53 @@
+// footer
+.wrap-footer {
+    position: relative;
+    padding: 60px 0;
+
+    @include bp(pc) {
+        padding: 100px 0;
+    }
+
+    &:before {
+        content: "";
+        display: block;
+        max-width: $max-width;
+        margin: 0 auto;
+    }
+
+    .footer {
+        &-sns {
+            margin: 0 0 12px;
+            text-align: center;
+            .share-facebook {
+                display: block;
+                width: 46px;
+                height: 46px;
+                margin: 0 auto;
+                @include hide-text;
+
+                background-image: url('../img/common/share_fb.png');
+                background-repeat: no-repeat;
+                background-position: 0 0;
+                background-size: 46px auto;
+
+                &:hover {
+                    background-position: 0 -46px;
+                }
+            }
+        }
+        > address {
+            font-style: normal;
+            font-family: Helvetica;
+            color: #888;
+            font-size: 12px;
+            text-align: center;
+        }
+    }
+
+    //.sns {
+        //position: relative;
+        //top: 0;
+        //left: 50%;
+        //margin: -60px 0 0 -40px;
+    //}
+}

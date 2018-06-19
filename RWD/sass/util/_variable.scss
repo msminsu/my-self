@@ -1,0 +1,21 @@
+// variable
+
+$fontFamily: -apple-system, BlinkMacSystemFont, AppleSDGothicNeo, Roboto, "맑은 고딕", "Malgun Gothic", "MS PGothic", "돋움", Dotum, sans-serif;
+$baseFontSize: 12px;
+
+// Default
+$min-width: 320px;
+$max-width: 1920px;
+
+// Breakpoint
+$bp-tablet: 640px;
+$bp-pc: 960px;
+$bp-max: 1260px;
+$hidpi: 'min-resolution: 1.5dppx';
+
+$breakpoints: (
+    popup: 'min-width: 500px',
+    tablet: 'min-width: 640px',
+    pc: 'min-width: 960px',
+    max: 'min-width: 1260px'
+);

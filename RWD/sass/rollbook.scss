@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+// base
+@import "base/normalize.4.0.0",
+"base/reset";
+// vendor
+// util
+@import "util/variable",
+"util/extend",
+"util/mixin";
+// layout
+@import "layout/gnb",
+"layout/common",
+"layout/footer";
+
+// page
+//@import "page/section",
+//"page/main",
+//"page/bg_movie",
+//"page/list";
+
+h1, h2, h3{
+    font-weight:normal;
+}
+
+.hidden{
+    @extend %hidden;
+}

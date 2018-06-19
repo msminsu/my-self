@@ -1,0 +1,12 @@
+// gnb
+
+#div_nctop {
+    display: none;
+    @include bp(pc) {
+        display: block;
+        .gnbContainer {
+            max-width: 1130px;
+            width: auto !important;
+        }
+    }
+}

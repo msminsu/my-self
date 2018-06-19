@@ -1,0 +1,18 @@
+// layout
+body {
+    color: #222;
+    font-family: $fontFamily;
+    font-size: $baseFontSize;
+    overflow-x: hidden;
+}
+
+.container {
+    position: relative;
+    min-width: $min-width;
+    overflow: hidden;
+
+    a {
+        color: #222;
+        text-decoration: none;
+    }
+}
